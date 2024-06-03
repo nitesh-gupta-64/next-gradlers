@@ -26,10 +26,10 @@ const Footer = () => {
             navigate complex admissions processes.
           </p>
           <div>
-            <Image src={li} />
-            <Image src={fb} />
-            <Image src={x} />
-            <Image src={insta} />
+            <Image height={45} src={li} />
+            <Image height={45} src={fb} />
+            <Image height={45} src={x} />
+            <Image height={45} src={insta} />
           </div>
         </div>
         <div>

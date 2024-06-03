@@ -20,22 +20,6 @@ const Countries = () => {
         <h5>Countries for Admission</h5>
       </div>
       <div>
-        {/* <div>
-          <Image src={can} />
-          <p>Canada</p>
-        </div>
-        <div>
-          <Image src={aus} />
-          <p>Australia</p>
-        </div>
-        <div>
-          <Image src={usa} />
-          <p>USA</p>
-        </div>
-        <div>
-          <Image src={fra} />
-          <p>France</p>
-        </div> */}
         <Swiper
           style={{
             width: "1000px",
@@ -50,7 +34,8 @@ const Countries = () => {
           }}
           loop={true}
         >
-          <SwiperSlide>
+          <SwiperSlide
+          >
             <div
               style={{
                 display: "flex",
@@ -67,8 +52,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>Canada</p>
@@ -91,8 +76,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>Australia</p>
@@ -115,8 +100,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>USA</p>
@@ -139,8 +124,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>France</p>
@@ -163,8 +148,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>Canada</p>
@@ -187,8 +172,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>Australia</p>
@@ -211,8 +196,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>USA</p>
@@ -235,8 +220,8 @@ const Countries = () => {
                 style={{
                   borderRadius: "100%",
                   objectFit: "contain",
-                  width: "180px",
-                  height: "180px",
+                  width: "140px",
+                  height: "140px",
                 }}
               />
               <p>France</p>

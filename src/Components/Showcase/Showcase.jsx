@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Showcase.module.css";
 import { AppContext } from "@/Context/AppContext";
 import bl from "../../../public/assets/images/blogs.png";

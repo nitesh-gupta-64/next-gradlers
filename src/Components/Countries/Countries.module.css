@@ -4,24 +4,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 7rem;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 .countries p {
-    font-size: 2.25rem;
+  font-size: 2.25rem;
 }
 
 .countries > div:nth-child(2) {
-    width: 80%;
-}
-
-.countries .swiper {
-    width: 180rem;
+  width: 80%;
 }
 
 .countries > div:nth-child(1) {
-    width: 100%;
-    display: flex;
-    justify-content: start;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+@media screen and (max-width: 800px) {
+  .countries {
+    padding: 2rem 1rem;
+    gap: 4rem;
+  }
 }

@@ -13,7 +13,24 @@
 }
 
 .about > div > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    padding: 4rem 1rem;
+    gap: 1rem;
+  }
+  .about p {
+    font-size: 1rem;
+  }
+  .about > div > div {
+    flex-direction: column;
+  }
+  .about > div > div > img {
+    height: 15rem;
+    width: 20rem;
+  }
 }

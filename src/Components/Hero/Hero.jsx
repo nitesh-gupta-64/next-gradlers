@@ -11,8 +11,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Hero = () => {
+
+  const mb = useMediaQuery("(min-width:800px)");
+
   return (
     <div className={styles.hero}>
       <div>
@@ -20,27 +24,31 @@ const Hero = () => {
           Welcome to <span>gradlers</span>
         </h2>
         <p>Give Wings to your Study Abroad Dreams</p>
-        <Swiper
-          grabCursor={true}
-          slidesPerView={1}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          pagination={{ clickable: true }}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <Image src={home1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={home3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={home4} alt="" />
-          </SwiperSlide>
-        </Swiper>
+        {mb && (
+          <div>
+            <Swiper
+              grabCursor={true}
+              slidesPerView={1}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              pagination={{ clickable: true }}
+              modules={[Pagination, Autoplay]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Image src={home1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image src={home3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image src={home4} alt="" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        )}
       </div>
       <div>
         <Image src={bulb} />

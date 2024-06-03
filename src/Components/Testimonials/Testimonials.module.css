@@ -1,9 +1,21 @@
 .testi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.testi > div:nth-child(1) > img {
-    transform: rotate(180deg);
+#rev > img {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 800px) {
+  #rev > img,
+  #rev1 > img {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  #rev, #rev2 {
+    padding: 0.3rem, 0rem;
+  }
 }

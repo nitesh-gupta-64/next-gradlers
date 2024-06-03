@@ -29,6 +29,7 @@
   font-size: 2.25rem;
   color: #000000ab;
   cursor: pointer;
+  text-align: center;
 }
 
 #clicked {
@@ -92,54 +93,156 @@
 }
 
 .events > div > div:nth-child(3) > h6 {
-    font-size: 22px;
-    color: #25315D;
+  font-size: 22px;
+  color: #25315d;
 }
 
 .events > div > div:nth-child(4) {
-    display: flex;
-    gap: 3rem;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .events > div > div:nth-child(4) > div {
-    display: flex;
-    gap: 3rem;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  gap: 3rem;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .events > div > div:nth-child(4) > div > div:nth-child(1) {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 2rem; 
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
 }
 
 .events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) {
-    background-color: #FEE580;
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  background-color: #fee580;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > h6 {
-    font-size: 1.8rem;
+.events
+  > div
+  > div:nth-child(4)
+  > div
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > h6 {
+  font-size: 1.8rem;
 }
 
-.events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2) > h6 {
-    font-size: 1.5rem;
-    color: #000000B2;
+.events
+  > div
+  > div:nth-child(4)
+  > div
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > h6 {
+  font-size: 1.5rem;
+  color: #000000b2;
 }
 
 .events > div > div:nth-child(4) > div > p {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(0deg, #fecb02, #fecb02);
+  cursor: pointer;
+  border-radius: 1.25rem;
+}
+
+@media screen and (max-width: 800px) {
+  .events {
+    padding: 0rem 1rem;
+    gap: 2rem;
+  }
+  .events > div {
+    gap: 1rem;
+  }
+  .events h1 {
+    font-size: 2rem;
+  }
+  .events > div > div:nth-child(1) {
+    width: 100%;
+    gap: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .events > div > div:nth-child(1) > p {
     font-size: 1.4rem;
-    padding: 0.8rem 1.2rem;
-    background: linear-gradient(0deg, #FECB02, #FECB02);
-    cursor: pointer;
-    border-radius: 1.25rem;
+  }
+  .events > div > div:nth-child(2) {
+    flex-direction: column;
+    padding: 1rem 1rem;
+    height: auto;
+    gap: 3rem;
+  }
+  .events > div > div:nth-child(2) > div {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+  .events > div > div:nth-child(2) > div > div {
+    gap: 1.5rem;
+  }
+  .events > div > div:nth-child(2) > div > div > h4 {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .events > div > div:nth-child(2) > div > h4 {
+    color: white;
+    font-size: 0.9rem;
+  }
+  .events > div > div:nth-child(3) {
+    flex-direction: column;
+    gap: 0;
+  }
+  .events > div > div:nth-child(3) > h6 {
+    font-size: 18px;
+  }
+  .events > div > div:nth-child(4) {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .events > div > div:nth-child(4) > div {
+    gap: 0.2rem;
+    width: 96%;
+  }
+  .events > div > div:nth-child(4) > div > div:nth-child(1) {
+    gap: 0.5rem;
+  }
+  .events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) {
+    padding: 0.4rem 0.8rem;
+  }
+  .events
+    > div
+    > div:nth-child(4)
+    > div
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > h6 {
+    font-size: 0.8rem;
+  }
+
+  .events
+    > div
+    > div:nth-child(4)
+    > div
+    > div:nth-child(1)
+    > div:nth-child(2)
+    > h6 {
+    font-size: 0.7rem;
+  }
+
+  .events > div > div:nth-child(4) > div > p {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+  }
 }

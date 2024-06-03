@@ -15,44 +15,61 @@ import { AppContext } from "@/Context/AppContext";
 // Install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
 
-const testimonials = [
-  {
-    name: "HUY HU VHAYH",
-    position: "WORKING IN HJH",
-    feedback:
-      "My experience was all about how they made me feel at their classes. they gave me the confidence.",
-    image: "/path/to/image.jpg", // Replace with the actual image path
-  },
-  {
-    name: "Nitesh",
-    position: "WORKING IN HJH",
-    feedback:
-      "My experience was all about how they made me feel at their classes. they gave me the confidence.",
-    image: "/path/to/image.jpg", // Replace with the actual image path
-  },
-  {
-    name: "Virat",
-    position: "WORKING IN HJH",
-    feedback:
-      "My experience was all about how they made me feel at their classes. they gave me the confidence.",
-    image: "/path/to/image.jpg", // Replace with the actual image path
-  },
-  // Add more testimonials as needed
-];
-
 const TestimonialsSwiper = () => {
-
-    const {admitInfo} = useContext(AppContext);
+  const { admitInfo } = useContext(AppContext);
 
   return (
     <div className={styles.testi}>
-      <div className="swiper-button-pre" style={navButtonStyles1}>
+      <style>{`
+        .swiper, .swiper-slide > div {
+            width: 792px;
+            height: 376px;
+        }
+
+        .swiper-slide > div {
+            padding: 4rem 2rem;
+        }
+
+        .swiper-slide > div > img {
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .swiper-slide > div > h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 800px) {
+            .swiper {
+                width: 280px;
+                height: 180px;
+            }
+            .swiper-slide > div {
+                width: 280px;
+                height: 180px;
+                padding: 1rem 1rem;
+            }
+            .swiper-slide > div > h3 {
+                margin-top: 0.3rem;
+                margin-bottom: 0.1rem;
+            }
+            .swiper-slide > div > img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+      `}</style>
+      <div
+        className="swiper-button-pre"
+        id={styles.rev}
+        style={navButtonStyles1}
+      >
         <Image src={arrow} />
       </div>
       <Swiper
+        className={styles.swi}
         style={{
-          width: "792px",
-          height: "376px",
           boxShadow: "0px 7px 24px 0px #00000040",
           borderRadius: "10px",
         }}
@@ -72,36 +89,32 @@ const TestimonialsSwiper = () => {
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
-                padding: "4rem 2rem",
                 border: "1px solid #ccc",
                 borderRadius: "10px",
                 backgroundColor: "#fff",
-                width: "792px",
-                height: "376px",
               }}
             >
               <img
                 src={testimonial.Image}
                 alt={testimonial.Name}
-                style={{
-                  borderRadius: "50%",
-                  width: "100px",
-                  height: "100px",
-                  objectFit: "cover",
-                }}
               />
-              <h3 style={{ marginTop: "20px", marginBottom: "10px" }}>
+              <h3>
                 {testimonial.Name}
               </h3>
               <p style={{ color: "#FFC107" }}>{testimonial.position}</p>
-              <p style={{ textAlign: "center", maxWidth: "500px" }}>
-                {testimonial.Program} {testimonial.College} {testimonial.Year}, {testimonial.Location}
+              <p style={{ textAlign: "center" }}>
+                {testimonial.Program} {testimonial.College} {testimonial.Year},{" "}
+                {testimonial.Location}
               </p>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-nex" style={navButtonStyles2}>
+      <div
+        className="swiper-button-nex"
+        id={styles.rev1}
+        style={navButtonStyles2}
+      >
         <Image src={arrow} />
       </div>
     </div>
@@ -111,7 +124,7 @@ const TestimonialsSwiper = () => {
 const navButtonStyles1 = {
   backgroundColor: "#25315D",
   color: "#FFFFFF",
-  padding: "0.5rem 1rem",
+  padding: "1.2rem 0.5rem",
   borderTopLeftRadius: "1.5rem",
   borderEndStartRadius: "1.5rem",
   display: "flex",
@@ -122,7 +135,7 @@ const navButtonStyles1 = {
 const navButtonStyles2 = {
   backgroundColor: "#25315D",
   color: "#FFFFFF",
-  padding: "0.5rem 1rem",
+  padding: "1.2rem 0.5rem",
   borderTopRightRadius: "1.5rem",
   borderEndEndRadius: "1.5rem",
   display: "flex",

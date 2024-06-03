@@ -66,14 +66,18 @@
 
     .header > div:nth-child(1) > div:nth-child(1) > a > img {
         display: block;
+        margin-top: 1.5rem;
     }
 
     .header div:nth-child(2) {
         height: 1rem;
     }
 
+    .header div:nth-child(1) {
+        height: 6rem;
+    }
+
     .header > div:nth-child(1) > div:nth-child(1) {
         width: 100%;
-        padding-top: 2rem;
     }
 }
