@@ -1,0 +1,15 @@
+.achieve {
+    width: 100%;
+    padding: 4rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .achieve > div:nth-child(1) {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }

@@ -1,0 +1,9 @@
+.testi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testi > div:nth-child(1) > img {
+    transform: rotate(180deg);
+}

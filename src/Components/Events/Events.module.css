@@ -1,0 +1,145 @@
+.events {
+  width: 100%;
+  padding: 4rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.events > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.events h1 {
+  color: #fecb02;
+  font-size: 3rem;
+}
+
+.events > div > div:nth-child(1) {
+  display: flex;
+  gap: 4rem;
+}
+
+.events > div > div:nth-child(1) > p {
+  font-size: 2.25rem;
+  color: #000000ab;
+  cursor: pointer;
+}
+
+#clicked {
+  color: black;
+}
+
+.events > div > div:nth-child(2) {
+  background-color: #0a5495;
+  display: flex;
+  padding: 2rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 15.625rem;
+  gap: 10rem;
+}
+
+.events > div > div:nth-child(2) > div {
+  width: 50%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.events > div > div:nth-child(2) > div > div {
+  display: flex;
+  gap: 8rem;
+}
+
+.events > div > div:nth-child(2) > div > div > h4 {
+  padding: 0.8rem 2rem;
+  font-size: 19px;
+}
+
+.events > div > div:nth-child(2) > div > div > h4:nth-child(1) {
+  background-color: #fee580;
+}
+
+.events > div > div:nth-child(2) > div > div > h4:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+
+.events > div > div:nth-child(2) > div > h4 {
+  color: white;
+  font-size: 1rem;
+}
+
+.events > div > div:nth-child(3) {
+  display: flex;
+  gap: 12rem;
+  justify-content: start;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.events > div > div:nth-child(3) > img {
+  box-shadow: 0px 4px 6px 0px #00000040;
+}
+
+.events > div > div:nth-child(3) > h6 {
+    font-size: 22px;
+    color: #25315D;
+}
+
+.events > div > div:nth-child(4) {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+.events > div > div:nth-child(4) > div {
+    display: flex;
+    gap: 3rem;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.events > div > div:nth-child(4) > div > div:nth-child(1) {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) {
+    background-color: #FEE580;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > h6 {
+    font-size: 1.8rem;
+}
+
+.events > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2) > h6 {
+    font-size: 1.5rem;
+    color: #000000B2;
+}
+
+.events > div > div:nth-child(4) > div > p {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(0deg, #FECB02, #FECB02);
+    cursor: pointer;
+    border-radius: 1.25rem;
+}

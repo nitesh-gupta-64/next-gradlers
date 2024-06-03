@@ -1,0 +1,50 @@
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../public/assets/images/bgWeb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0a5495;
+    padding: 0 2rem;  
+    padding-right: 6rem;
+    display: flex;
+    color: white;
+}
+
+.hero > div {
+    height: 100%;
+}
+
+.hero > div:nth-child(1) {
+    padding: 3rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 2.25rem;
+    text-align: left;
+}
+
+.hero > div:nth-child(2) {
+    width: 40%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.hero > div:nth-child(2) > img:nth-child(1) {
+    position: absolute;
+    top: 24rem;
+    right: 19rem;
+}
+
