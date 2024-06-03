@@ -17,8 +17,9 @@
 .header > div:nth-child(1) > div:nth-child(1) {
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 3rem;
+  color: white;
 }
 
 .header > div:nth-child(1) > div:nth-child(2) {
@@ -51,4 +52,28 @@
 
 .header > div:nth-child(2) a {
     font-size: 19px;
+}
+
+.header > div:nth-child(1) > div:nth-child(1) > a > img {
+    display: none;
+    filter: invert(100%);
+}
+
+@media screen and (max-width: 800px) {
+    .header div:nth-child(1) > div:nth-child(2) {
+        display: none;
+    }
+
+    .header > div:nth-child(1) > div:nth-child(1) > a > img {
+        display: block;
+    }
+
+    .header div:nth-child(2) {
+        height: 1rem;
+    }
+
+    .header > div:nth-child(1) > div:nth-child(1) {
+        width: 100%;
+        padding-top: 2rem;
+    }
 }
