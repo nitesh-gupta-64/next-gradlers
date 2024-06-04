@@ -1,0 +1,48 @@
+.card {
+  width: 19.125rem;
+  height: 19.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.card > div:nth-child(1) {
+  width: 8.7rem;
+  border-top-right-radius: 50rem;
+  border-top-left-radius: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fecb02;
+  padding: 0.5rem 0;
+}
+
+.card > div:nth-child(2) > p:nth-child(1) {
+  background-color: #fecb02;
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+  width: 14.3rem;
+  border-radius: 19px;
+  padding: 0.6rem 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card > div:nth-child(2) {
+  width: 19.125rem;
+  height: 14.375rem;
+  box-shadow: 0px 8px 21.5px 0px #a04c16;
+  background-color: #fff1bc;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+}
