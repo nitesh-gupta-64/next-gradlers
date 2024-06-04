@@ -1,0 +1,43 @@
+.loc {
+  width: 100%;
+  padding: 6rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.loc > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.loc > div > h2 {
+  color: #fecb02;
+  font-size: 3rem;
+}
+
+.loc > div > p {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .loc {
+    padding: 5rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .loc > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+  }
+}

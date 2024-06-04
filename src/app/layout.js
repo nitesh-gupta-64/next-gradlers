@@ -3,6 +3,8 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import AppContextProvider from "@/Context/AppContext";
 import Header from "@/Components/Header/Header";
+import Footer from "@/Components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,8 @@ export default function RootLayout({ children }) {
             <>
               <Header />
               {children}
+              <Footer/>
+              <ToastContainer/>
             </>
           </AppRouterCacheProvider>
         </AppContextProvider>

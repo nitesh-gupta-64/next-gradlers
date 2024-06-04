@@ -1,0 +1,35 @@
+.cities {
+  width: 100%;
+  padding: 4rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.cities p {
+  font-size: 2.25rem;
+}
+
+.cities > div:nth-child(2) {
+  width: 80%;
+}
+
+.cities h2 {
+  color: #fecb02;
+  font-size: 3rem;
+}
+
+.cities > div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .cities {
+    padding: 2rem 1rem;
+    gap: 4rem;
+  }
+}

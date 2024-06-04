@@ -1,32 +1,25 @@
 "use client";
 import React, { useContext } from "react";
-import styles from "./Hero.module.css";
-import Image from "next/image";
+import styles from "./MBA.module.css";
 import home1 from "../../../public/assets/images/home1.png";
-import home2 from "../../../public/assets/images/home2.png";
 import home3 from "../../../public/assets/images/contact.png";
 import home4 from "../../../public/assets/images/exam.png";
-import bulb from "../../../public/assets/images/bulb.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 import { AppContext } from "@/Context/AppContext";
 
-const Hero = () => {
-  const {mb} = useContext(AppContext)
-
+const MBA = () => {
+  const { mb } = useContext(AppContext);
   return (
-    <div className={styles.hero}>
-      <div>
-        <h2>
-          Welcome to <span>gradlers</span>
-        </h2>
-        <p>Give Wings to your Study Abroad Dreams</p>
-        {mb && (
+    <div className={styles.mba}>
+      {mb && (
+        <div>
           <Swiper
             style={{
-                width: '35rem',
+              width: "35rem",
             }}
             grabCursor={true}
             slidesPerView={1}
@@ -36,7 +29,7 @@ const Hero = () => {
             }}
             pagination={{ clickable: true }}
             modules={[Pagination, Autoplay]}
-            className="mySwiper"
+            className={styles.mySwiper}
           >
             <SwiperSlide>
               <Image src={home1} alt="" />
@@ -48,14 +41,15 @@ const Hero = () => {
               <Image src={home4} alt="" />
             </SwiperSlide>
           </Swiper>
-        )}
-      </div>
+        </div>
+      )}
       <div>
-        <Image src={bulb} />
-        <Image src={home2} />
+        <h2>MBA Admission Counselling</h2>
+        <p>With 27+ years in the industry, we know exactly what goes on in the admission decision rooms of your dream university</p>
+        <p>BOOK A CALL</p>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default MBA;

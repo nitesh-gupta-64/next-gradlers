@@ -1,0 +1,52 @@
+.con {
+  width: 100%;
+  padding: 5rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.con > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.con > div:nth-child(1) > h2 {
+  font-size: 3rem;
+}
+
+.con > div:nth-child(1) > p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .con {
+    padding: 3rem 1rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .con > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .con > div:nth-child(1) > h2 {
+    font-size: 2.5rem;
+  }
+
+  .con > div:nth-child(1) > p {
+    font-size: 1.25rem;
+  }
+  .con > div:nth-child(1) > img {
+    height: 13rem;
+    width: 20rem;
+  }
+}

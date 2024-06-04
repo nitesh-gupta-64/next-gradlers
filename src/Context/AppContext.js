@@ -2,7 +2,7 @@
 import { db } from "@/firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { createContext, use, useEffect, useRef, useState } from "react";
-import styled from "styled-components";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 // Step1
 export const AppContext = createContext();
@@ -60,11 +60,13 @@ function AppContextProvider({ children }) {
     fetchAdmitInfo();
     fetchBlogs();
   }, []);
+  const mb = useMediaQuery("(min-width:800px)");
 
   const value = {
     events,
     admitInfo,
     blogs,
+    mb,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -7,7 +7,6 @@ import Achievements from "@/Components/Achievements/Achievements";
 import Countries from "@/Components/Countries/Countries";
 import Events from "@/Components/Events/Events";
 import Showcase from "@/Components/Showcase/Showcase";
-import Footer from "@/Components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Countries/>
       <Events/>
       <Showcase/>
-      <Footer/>
     </>
   );
 }
