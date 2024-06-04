@@ -163,7 +163,7 @@ const Showcase = () => {
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.image} alt="img" />
-              <p>"{eve.mainDescription}"</p>
+              <p>"{eve.title}"</p>
             </div>
           ))}
           {clicked === "ss" &&
@@ -177,7 +177,7 @@ const Showcase = () => {
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.Image} alt="img" />
-              <p>"{eve.Description}"</p>
+              <p>"{eve.Title}"</p>
             </div>
           ))}        
       </div>
