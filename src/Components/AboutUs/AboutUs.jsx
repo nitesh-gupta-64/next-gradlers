@@ -6,7 +6,7 @@ import about from "../../../public/assets/images/about.png";
 
 const AboutUs = () => {
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="aboutus">
       <h5>About Us</h5>
       <div>
         <div>

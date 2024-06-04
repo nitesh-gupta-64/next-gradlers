@@ -54,7 +54,7 @@
     font-size: 19px;
 }
 
-.header > div:nth-child(1) > div:nth-child(1) > a > img {
+.header > div:nth-child(1) > div:nth-child(1) > a:nth-child(2) > img {
     display: none;
     filter: invert(100%);
 }
@@ -64,7 +64,7 @@
         display: none;
     }
 
-    .header > div:nth-child(1) > div:nth-child(1) > a > img {
+    .header > div:nth-child(1) > div:nth-child(1) > a:nth-child(2) > img {
         display: block;
         margin-top: 1.5rem;
     }

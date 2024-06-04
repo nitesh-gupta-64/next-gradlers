@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { AppContext } from "@/Context/AppContext";
+import Link from "next/link";
 
 const GMAT = () => {
   const { mb } = useContext(AppContext);
@@ -46,7 +47,7 @@ const GMAT = () => {
       <div>
         <h2>GMAT</h2>
         <p>START YOUR GMAT JOURNEY WITH THE LEADERS OF GMAT PREP</p>
-        <p>BOOK A CALL</p>
+        <p><Link href='/contactus'>BOOK A CALL</Link></p>
       </div>
     </div>
   );

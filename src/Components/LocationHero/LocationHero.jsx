@@ -8,7 +8,7 @@ const LocationHero = () => {
     <div className={styles.loc}>
       <div>
         <h2>Join us to get your dreams come true!</h2>
-        <p>Join us various locations</p>
+        <p>Join us at various locations</p>
       </div>
       <Image src={loca} />
     </div>

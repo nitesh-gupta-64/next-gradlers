@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./Events.module.css";
 import { AppContext } from "@/Context/AppContext";
+import Link from "next/link";
 
 const Events = () => {
   const [clicked, setClicked] = useState("up");
@@ -48,15 +49,25 @@ const Events = () => {
       <h5>Events</h5>
       <div>
         <div>
-          <p onClick={() => setClicked("up")} id={clicked === 'up' && styles.clicked}>Upcoming Events</p>
-          <p onClick={() => setClicked("re")} id={clicked === 're' && styles.clicked}>Recent Events</p>
+          <p
+            onClick={() => setClicked("up")}
+            id={clicked === "up" && styles.clicked}
+          >
+            Upcoming Events
+          </p>
+          <p
+            onClick={() => setClicked("re")}
+            id={clicked === "re" && styles.clicked}
+          >
+            Recent Events
+          </p>
         </div>
         <div>
           <h1>{show.Title}</h1>
           <div>
             <div>
               <h4>
-               {show.Date && new Date(show.Date.toDate()).toDateString()}
+                {show.Date && new Date(show.Date.toDate()).toDateString()}
               </h4>
               <h4>IST {show.Time}</h4>
             </div>
@@ -68,39 +79,41 @@ const Events = () => {
           <img height={150} width={280} src={show.Image} alt="" />
         </div>
         <div>
-          {clicked === 'up' && upcoming.length > 0 ? (
-            upcoming.slice(0,2).map((event, index) => (
+          {clicked === "up" && upcoming.length > 0 ? (
+            upcoming.slice(0, 2).map((event, index) => (
               <div key={index}>
                 <div>
-                    <div>
-                        <h6>{new Date(event.Date.toDate()).toDateString()}</h6>
-                        <h6>{event.Time}</h6>
-                    </div>
-                    <div>
-                        <h6>{event.Title}</h6>
-                        <h6>- {event.Location}</h6>
-                    </div>
+                  <div>
+                    <h6>{new Date(event.Date.toDate()).toDateString()}</h6>
+                    <h6>{event.Time}</h6>
+                  </div>
+                  <div>
+                    <h6>{event.Title}</h6>
+                    <h6>- {event.Location}</h6>
+                  </div>
                 </div>
-                <p>REGISTER NOW</p>
+                <p>
+                  <Link href='/countactus'>REGISTER NOW</Link>
+                </p>
               </div>
             ))
           ) : (
             <></>
           )}
-          {clicked === 're' && recent.length > 0 ? (
-            recent.slice(0,2).map((event, index) => (
-                <div key={index}>
+          {clicked === "re" && recent.length > 0 ? (
+            recent.slice(0, 2).map((event, index) => (
+              <div key={index}>
                 <div>
-                    <div>
-                        <h6>{new Date(event.Date.toDate()).toDateString()}</h6>
-                        <h6>{event.Time}</h6>
-                    </div>
-                    <div>
-                        <h6>{event.Title}</h6>
-                        <h6>- {event.Location}</h6>
-                    </div>
+                  <div>
+                    <h6>{new Date(event.Date.toDate()).toDateString()}</h6>
+                    <h6>{event.Time}</h6>
+                  </div>
+                  <div>
+                    <h6>{event.Title}</h6>
+                    <h6>- {event.Location}</h6>
+                  </div>
                 </div>
-                <p>REGISTER NOW</p>
+                <p><Link href='contactus'>REGISTER NOW</Link></p>
               </div>
             ))
           ) : (

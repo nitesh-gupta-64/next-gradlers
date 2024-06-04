@@ -46,13 +46,13 @@ const Navbar = () => {
                     className={styles.drop2}
                   >
                     <li>
-                      <Link href="/ielts"><p>IELTS Academics</p></Link>
+                      <Link href="/counselling"><p>IELTS Academics</p></Link>
                     </li>
                     <li>
-                      <Link href="/pte"><p>PTE Academics</p></Link>
+                      <Link href="/counselling"><p>PTE Academics</p></Link>
                     </li>
                     <li>
-                      <Link href="/toefl"><p>TOEFL IBT</p></Link>
+                      <Link href="/counselling"><p>TOEFL IBT</p></Link>
                     </li>
                   </ul>
                 )}
@@ -72,13 +72,13 @@ const Navbar = () => {
                     className={styles.drop5}
                   >
                     <li>
-                      <Link href="/ielts"><p>IELTS Academics</p></Link>
+                      <Link href="/counselling"><p>IELTS Academics</p></Link>
                     </li>
                     <li>
-                      <Link href="/pte"><p>PTE Academics</p></Link>
+                      <Link href="/counselling"><p>PTE Academics</p></Link>
                     </li>
                     <li>
-                      <Link href="/toefl"><p>TOEFL IBT</p></Link>
+                      <Link href="/counselling"><p>TOEFL IBT</p></Link>
                     </li>
                   </ul>
                 )}
@@ -101,27 +101,27 @@ const Navbar = () => {
               className={styles.drop3}
             >
               <li>
-                <Link href="/ielts">Undergrad</Link>
+                <Link href="/counselling">Undergrad</Link>
               </li>
               <li>
-                <Link href="/pte">Masters (MS)</Link>
+                <Link href="/counselling">Masters (MS)</Link>
               </li>
               <li>
-                <Link href="/toefl">MBA</Link>
+                <Link href="/mba">MBA</Link>
               </li>
               <li>
-                <Link href="/toefl">PHD</Link>
+                <Link href="/counselling">PHD</Link>
               </li>
             </ul>
           )}
         </li>
         <li>
-          <Link href="/visa">
+          <Link href="/contactus">
             <h3>Visa Guidance</h3>
           </Link>
         </li>
         <li>
-          <Link href="/cnc">
+          <Link href="/counselling">
             <h3>Career and Counselling</h3>
           </Link>
         </li>
@@ -140,13 +140,13 @@ const Navbar = () => {
               className={styles.drop4}
             >
               <li>
-                <Link href="/ielts">IELTS</Link>
+                <Link href="/gmat">GMAT</Link>
               </li>
               <li>
-                <Link href="/pte">PTE</Link>
+                <Link href="/counselling">IELTS</Link>
               </li>
               <li>
-                <Link href="/toefl">TOEFL</Link>
+                <Link href="/counselling">TOEFL</Link>
               </li>
             </ul>
           )}

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import fb from "../../../public/assets/images/facebook.png";
 import x from "../../../public/assets/images/twitter.png";
 import insta from "../../../public/assets/images/insta.png";
@@ -16,14 +16,20 @@ const Header = () => {
     <div className={styles.header}>
       <div>
         <div>
-          <Image height={64} src={logo} />
-          <Link href={clicked ? '/' : 'navpage'} onClick={() => setClicked(!clicked)}>
+          <Link href='/'>
+            <Image height={64} src={logo} />
+          </Link>
+          <Link
+            href={clicked ? "/" : "navpage"}
+            onClick={() => setClicked(!clicked)}
+          >
             <Image height={32} className={styles.ham} src={ham} />
           </Link>
         </div>
         <div>
-          <Link href="/aboutus">About Us</Link>
+          <Link href="/blogs">About Us</Link>
           <Link href="/resources">Resources</Link>
+          <Link href="/success">Success Stories</Link>
           <Link href="/locations">Our Locations</Link>
           <div>
             <Link href="/contactus">Contact Us</Link>

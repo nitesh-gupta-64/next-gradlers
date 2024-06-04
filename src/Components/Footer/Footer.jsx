@@ -9,13 +9,16 @@ import li from "../../../public/assets/images/linkedIn.png";
 import call from "../../../public/assets/images/call.png";
 import addr from "../../../public/assets/images/addr.png";
 import mail from "../../../public/assets/images/mail.png";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
       <div>
         <p>Want to get into a college in Abroud?</p>
-        <p>Talk to an expert today</p>
+        <p>
+          <Link href='/contactus'>Talk to an expert today</Link>
+        </p>
       </div>
       <div>
         <div>
@@ -35,7 +38,7 @@ const Footer = () => {
         <div>
           <span>Help</span>
           <ul>
-            <li>About us</li>
+            <li><Link href='/#aboutus'>About us</Link></li>
             <li>Branch List</li>
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
@@ -72,8 +75,8 @@ const Footer = () => {
       <div>
         <h2>COPYRIGHT ©GRADLERS. ALL RIGHTS RESERVED</h2>
         <div>
-            <p>Terms and Conditions</p>
-            <p>Privacy and policy</p>
+          <p>Terms and Conditions</p>
+          <p>Privacy and policy</p>
         </div>
       </div>
     </div>

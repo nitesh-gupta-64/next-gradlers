@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { AppContext } from "@/Context/AppContext";
+import Link from "next/link";
 
 const MBA = () => {
   const { mb } = useContext(AppContext);
@@ -46,7 +47,7 @@ const MBA = () => {
       <div>
         <h2>MBA Admission Counselling</h2>
         <p>With 27+ years in the industry, we know exactly what goes on in the admission decision rooms of your dream university</p>
-        <p>BOOK A CALL</p>
+        <p><Link href='/contactus'>BOOK A CALL</Link></p>
       </div>
     </div>
   );

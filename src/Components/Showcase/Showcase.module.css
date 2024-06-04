@@ -95,7 +95,7 @@
 
 @media screen and (max-width: 800px) {
   .show {
-    padding: 5rem 0.5rem;
+    padding: 2rem 0.5rem;
     gap: 2rem;
   }
   .show > div:nth-child(1) {
