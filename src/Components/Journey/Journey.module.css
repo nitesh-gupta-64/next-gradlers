@@ -30,6 +30,7 @@
 .journey > div {
   height: 30rem;
   width: 100%;
+  gap: 3rem;
 }
 
 .journey > div > div > div:nth-child(1) {
@@ -71,6 +72,23 @@
 
 #clicked {
   background-color: #fecb02;
+}
+
+@media screen and (max-width: 1300px) {
+  .journey {
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+  .journey img {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .journey img {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {

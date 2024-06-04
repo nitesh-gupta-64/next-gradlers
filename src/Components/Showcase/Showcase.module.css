@@ -93,6 +93,13 @@
   border-radius: 0.75rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .show {
+    padding: 5rem 2rem;
+    gap: 3rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .show {
     padding: 2rem 0.5rem;
@@ -118,5 +125,5 @@
   }
   .show > div:nth-child(3) > div {
     gap: 0.5rem;
-  }  
+  }
 }

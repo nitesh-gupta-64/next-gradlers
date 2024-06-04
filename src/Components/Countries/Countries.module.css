@@ -22,9 +22,27 @@
   justify-content: start;
 }
 
+@media screen and (max-width: 1400px) {
+  .countries {
+    padding: 4rem 5rem;
+    align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .countries {
+    padding: 4rem 2rem;
+    align-items: start;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .countries {
     padding: 2rem 1rem;
     gap: 4rem;
+  }
+  .countries {
+    align-items: start;
   }
 }

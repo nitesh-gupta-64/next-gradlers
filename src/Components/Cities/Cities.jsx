@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import SwiperCore from "swiper";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Cities.module.css";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
@@ -10,10 +10,12 @@ import del from "../../../public/assets/images/del.png";
 import mum from "../../../public/assets/images/mum.png";
 import luk from "../../../public/assets/images/luk.png";
 import pra from "../../../public/assets/images/pra.png";
+import { AppContext } from "@/Context/AppContext";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Cities = () => {
+  const {mb} = useContext(AppContext)
   return (
     <div className={styles.cities}>
       <div>

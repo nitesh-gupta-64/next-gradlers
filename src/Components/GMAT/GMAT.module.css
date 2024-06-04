@@ -1,7 +1,7 @@
 .gmat {
   width: 100%;
   padding: 3rem 0;
-  padding-left: 9rem;
+  padding-left: 8rem;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -24,7 +24,7 @@
 .gmat h2 {
   color: white;
   background-color: #0a5495;
-  width: 60rem;
+  width: 120%;
   padding: 0.8rem 1rem;
   font-size: 32px;
 }
@@ -46,6 +46,12 @@
   margin-left: 0.8rem;
   background-color: #fecb02;
   border-radius: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .gmat {
+    padding: 3rem 1rem;
+  }
 }
 
 @media screen and (max-width: 800px) {

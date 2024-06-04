@@ -157,6 +157,14 @@
   border-radius: 1.25rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .events {
+    width: 100%;
+    padding: 4rem 2rem;
+    gap: 4rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .events {
     padding: 0rem 1rem;

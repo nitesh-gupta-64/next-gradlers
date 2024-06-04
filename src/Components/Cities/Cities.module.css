@@ -27,9 +27,27 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 1400px) {
+  .cities {
+    padding: 4rem 5rem;
+    align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .cities {
+    padding: 4rem 2rem;
+    align-items: start;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .cities {
     padding: 2rem 1rem;
     gap: 4rem;
+  }
+  .cities {
+    align-items: center;
   }
 }

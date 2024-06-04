@@ -106,7 +106,7 @@ const Blog = () => {
             <div>
               <img src={show.image} />
             </div>
-            <p>{show.mainDescription}</p>
+            <p>{show.description}</p>
             <ul>{show.tags && show.tags.map((tag) => <li>{tag}</li>)}</ul>
             <p>{show.summary}</p>
           </div>

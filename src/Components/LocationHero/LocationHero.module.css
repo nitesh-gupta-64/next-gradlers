@@ -20,6 +20,11 @@
   font-size: 3rem;
 }
 
+.loc img {
+  height: auto;
+  width: 60%;
+}
+
 .loc > div > p {
   font-size: 2rem;
 }
@@ -39,5 +44,8 @@
     align-items: start;
     justify-content: center;
     gap: 2rem;
+  }
+  .loc img {
+    width: 100%;
   }
 }

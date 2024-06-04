@@ -23,7 +23,7 @@
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1110px) {
   .con {
     padding: 3rem 1rem;
     flex-direction: column;

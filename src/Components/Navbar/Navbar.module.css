@@ -1,5 +1,5 @@
 .navbar {
-  width: 91rem;
+  width: 95%;
   height: 5.9375rem;
   background-color: #fff9e0;
   position: absolute;
@@ -86,6 +86,21 @@
 
 .navbar > ul > li > ul > li > ul > li:nth-last-child(1) {
   border: none;
+}
+
+@media screen and (max-width: 1488px) {
+  .navbar > ul {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .navbar h3 {
+    font-size: 1rem;
+  }
+  .navbar > ul {
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 800px) {

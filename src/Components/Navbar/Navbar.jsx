@@ -46,13 +46,19 @@ const Navbar = () => {
                     className={styles.drop2}
                   >
                     <li>
-                      <Link href="/counselling"><p>IELTS Academics</p></Link>
+                      <Link href="/counselling">
+                        <p>IELTS Academics</p>
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/counselling"><p>PTE Academics</p></Link>
+                      <Link href="/counselling">
+                        <p>PTE Academics</p>
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/counselling"><p>TOEFL IBT</p></Link>
+                      <Link href="/counselling">
+                        <p>TOEFL IBT</p>
+                      </Link>
                     </li>
                   </ul>
                 )}
@@ -72,13 +78,19 @@ const Navbar = () => {
                     className={styles.drop5}
                   >
                     <li>
-                      <Link href="/counselling"><p>IELTS Academics</p></Link>
+                      <Link href="/counselling">
+                        <p>IELTS Academics</p>
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/counselling"><p>PTE Academics</p></Link>
+                      <Link href="/counselling">
+                        <p>PTE Academics</p>
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/counselling"><p>TOEFL IBT</p></Link>
+                      <Link href="/counselling">
+                        <p>TOEFL IBT</p>
+                      </Link>
                     </li>
                   </ul>
                 )}
@@ -100,6 +112,9 @@ const Navbar = () => {
               onMouseLeave={() => setDrop3(false)}
               className={styles.drop3}
             >
+              <li>
+                <Link href="/success">Success Stories</Link>
+              </li>
               <li>
                 <Link href="/counselling">Undergrad</Link>
               </li>
