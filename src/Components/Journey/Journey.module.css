@@ -129,9 +129,9 @@
     flex-direction: row;
   }
   .journey > div > div > div:nth-child(2) > div {
-    width: auto;
+    width: 5rem;
     height: auto;
-    padding: 0.7rem 0.5rem;
+    padding: 0.8rem 0.5rem;
   }
   .journey > div > div > div:nth-child(2) > div > p {
     font-size: 0.8rem;

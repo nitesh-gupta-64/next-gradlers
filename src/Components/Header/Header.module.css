@@ -7,7 +7,7 @@
 .header > div:nth-child(1) {
   background-color: #0a5495;
   display: flex;
-  padding: 1rem 3rem;
+  padding: 1rem 2.6rem;
   justify-content: space-between;
   align-items: start;
   color: white;
@@ -27,6 +27,11 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
+}
+
+.header > div:nth-child(1) > div:nth-child(2) img {
+  width: 2.2rem;
+  height: 2rem;
 }
 
 .header > div:nth-child(1) > div:nth-child(2) > * {

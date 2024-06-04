@@ -106,7 +106,8 @@ const Blog = () => {
             <div>
               <img src={show.image} />
             </div>
-            <p>{show.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: show.description }} />
+            {/* <p>{show.description}</p> */}
             <ul>{show.tags && show.tags.map((tag) => <li>{tag}</li>)}</ul>
             <p>{show.summary}</p>
           </div>
