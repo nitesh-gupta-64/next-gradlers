@@ -70,7 +70,7 @@ const Form = () => {
   };
 
   return (
-    <div className={styles.form}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <div>
         <label htmlFor="name">Name</label>
         <input
@@ -79,6 +79,7 @@ const Form = () => {
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -89,6 +90,7 @@ const Form = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -98,6 +100,7 @@ const Form = () => {
           placeholder="Phone number"
           value={phone}
           onChange={setPhone}
+          required
         />
         <div>
           <input type="checkbox" onChange={(e) => setIsWhatsapp(!isWhatsapp)} />
@@ -131,8 +134,8 @@ const Form = () => {
           )}
         </div>
       </div>
-      <button onClick={handleSubmit}>Send Message</button>
-    </div>
+      <button>Send Message</button>
+    </form>
   );
 };
 

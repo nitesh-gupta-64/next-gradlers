@@ -1,0 +1,122 @@
+.admit {
+  width: 95%;
+  border-radius: 22px;
+  background-color: #0a5495;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  gap: 2rem;
+}
+
+.admit > h2 {
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.admit > div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.admit > div:nth-child(2) > h2 {
+  background-color: #fee580;
+  font-size: 29px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+
+#click {
+  background-color: #fecb02;
+}
+
+.admit > div:nth-child(3) {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 3rem;
+}
+
+.admit > div:nth-child(3) > div {
+  width: 45%;
+  padding: 1.6rem 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 2.125rem;
+  background-color: white;
+}
+
+.admit > div:nth-child(3) > div > img {
+  height: 105px;
+  width: 105px;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+
+.admit > div:nth-child(3) > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.admit > div:nth-child(3) > div > div > p:nth-child(1) {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.admit > div:nth-child(3) > div > div > p:nth-child(2) {
+  font-size: 17px;
+}
+
+@media screen and (max-width: 800px) {
+  .admit {
+    width: 97%;
+    padding: 1.5rem 0.5rem;
+    gap: 2rem;
+  }
+  .admit > div:nth-child(2) {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .admit > div:nth-child(2) > h2 {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+  .admit > div:nth-child(3) {
+    padding: 1rem 0.2rem;
+    gap: 1.5rem;
+  }
+  .admit > div:nth-child(3) > div {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 1.725rem;
+  }
+  .admit > div:nth-child(3) > div > img {
+    height: 80px;
+    width: 80px;
+  }
+  .admit > div:nth-child(3) > div > div {
+    gap: 0.2rem;
+  }
+  .admit > div:nth-child(3) > div > div > p:nth-child(1) {
+    font-weight: 500;
+    font-size: 19px;
+  }
+  .admit > div:nth-child(3) > div > div > p:nth-child(2) {
+    font-size: 14px;
+  }
+}

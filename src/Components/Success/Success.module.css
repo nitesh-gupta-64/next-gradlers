@@ -1,0 +1,14 @@
+.suc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .suc {
+    padding: 2rem 0.2rem;
+  }
+}
