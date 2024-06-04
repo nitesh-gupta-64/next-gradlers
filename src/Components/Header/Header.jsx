@@ -20,7 +20,8 @@ const Header = () => {
             <Image height={64} src={logo} />
           </Link>
           <Link
-            href={clicked ? "/" : "navpage"}
+            href="navpage"
+            // href={clicked ? "/" : "navpage"}
             onClick={() => setClicked(!clicked)}
           >
             <Image height={32} className={styles.ham} src={ham} />

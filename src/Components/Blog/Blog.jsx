@@ -107,6 +107,8 @@ const Blog = () => {
               <img src={show.image} />
             </div>
             <p>{show.mainDescription}</p>
+            <ul>{show.tags && show.tags.map((tag) => <li>{tag}</li>)}</ul>
+            <p>{show.summary}</p>
           </div>
         ) : (
           <div>No Blogs to show related to this Category</div>
