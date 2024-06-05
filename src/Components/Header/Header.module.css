@@ -7,11 +7,11 @@
 .header > div:nth-child(1) {
   background-color: #0a5495;
   display: flex;
-  padding: 1rem 2.6rem;
+  padding: 0.2rem 2.8rem;
   justify-content: space-between;
   align-items: start;
   color: white;
-  height: 9.375rem;
+  height: 6.5rem;
 }
 
 .header > div:nth-child(1) > div:nth-child(1) {
@@ -29,10 +29,7 @@
   padding-top: 1rem;
 }
 
-.header > div:nth-child(1) > div:nth-child(2) img {
-  width: 2.2rem;
-  height: 2rem;
-}
+
 
 .header > div:nth-child(1) > div:nth-child(2) > * {
   padding: 0.5rem 3rem;
@@ -47,12 +44,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
+}
+
+.header > div:nth-child(1) > div:nth-child(2) > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .header > div:nth-child(2) {
   background-color: #fee580;
-  height: 4.375rem;
+  height: 4rem;
 }
 
 .header > div:nth-child(2) a {

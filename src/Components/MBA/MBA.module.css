@@ -1,7 +1,7 @@
 .mba {
   width: 100%;
   padding: 3rem 0;
-  padding-left: 9rem;
+  padding-left: 6rem;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -24,7 +24,7 @@
 .mba h2 {
   color: white;
   background-color: #0a5495;
-  width: 120%;
+  width: 140%;
   padding: 0.8rem 1rem;
   font-size: 32px;
 }

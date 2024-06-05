@@ -15,7 +15,7 @@ import { AppContext } from "@/Context/AppContext";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Countries = () => {
-  const {mb} = useContext(AppContext)
+  const { mb } = useContext(AppContext);
   return (
     <div className={styles.countries}>
       <div>
@@ -31,7 +31,11 @@ const Countries = () => {
             justifyContent: "center",
           }}
           grabCursor={true}
-          pagination={{ clickable: true }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+          }}
           slidesPerView={mb ? 4 : 1}
           autoplay={{
             delay: 1000,

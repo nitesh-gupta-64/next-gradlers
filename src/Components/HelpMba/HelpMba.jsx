@@ -44,7 +44,9 @@ const HelpMba = () => {
   ];
   return (
     <div className={styles.help}>
-      <h5>How We Help You Get Into Your Dream MBA Program?</h5>
+      <div>
+        <h5>How We Help You Get Into Your Dream MBA Program?</h5>
+      </div>
       <div>
         {data.map((d) => (
           <Card data={d} />

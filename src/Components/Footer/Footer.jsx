@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div>
-        <p>Want to get into a college in Abroud?</p>
+        <p>Want to get into a college in Abroad?</p>
         <p>
           <Link href='/contactus'>Talk to an expert today</Link>
         </p>

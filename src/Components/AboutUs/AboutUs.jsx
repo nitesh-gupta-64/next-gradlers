@@ -9,11 +9,11 @@ const AboutUs = () => {
     <div className={styles.about} id="aboutus">
       <h5>About Us</h5>
       <div>
-        <div>
-          <Image src={about} />
+        <div> 
           <p>{data.aboutUs}</p>
+          <Image width={700} src={about} />
         </div>
-        <p>{data.aboutUs1}</p>
+        
       </div>
     </div>
   );

@@ -28,9 +28,9 @@ const Header = () => {
           <div>
             <Link href="/contactus">Contact Us</Link>
             <div>
-              <Image height={34} src={fb} />
-              <Image height={34} src={x} />
-              <Image height={34} src={insta} />
+              <Image height={30} src={fb} />
+              <Image height={30} src={x} />
+              <Image height={30} src={insta} />
             </div>
           </div>
         </div>

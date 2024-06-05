@@ -88,7 +88,6 @@ const TestimonialsSwiper = () => {
           nextEl: ".swiper-button-nex",
           prevEl: ".swiper-button-pre",
         }}
-        pagination={{ clickable: true }}
         slidesPerView={1}
         loop={true}
       >

@@ -14,7 +14,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { AppContext } from "@/Context/AppContext";
 
 const Hero = () => {
-  const {mb} = useContext(AppContext)
+  const { mb } = useContext(AppContext);
 
   return (
     <div className={styles.hero}>
@@ -24,30 +24,47 @@ const Hero = () => {
         </h2>
         <p>Give Wings to your Study Abroad Dreams</p>
         {mb && (
-          <Swiper
-            style={{
-                width: '35rem',
-            }}
-            grabCursor={true}
-            slidesPerView={1}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            pagination={{ clickable: true }}
-            modules={[Pagination, Autoplay]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <Image src={home1} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={home3} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={home4} alt="" />
-            </SwiperSlide>
-          </Swiper>
+          <div className={styles.swi}>
+            <div className="swiper-wrapper">
+              <Swiper
+                style={{
+                  maxWidth: "35rem",
+                  maxHeight: "20rem",
+                }}
+                grabCursor={true}
+                slidesPerView={1}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                // pagination={{ clickable: true }}
+                modules={[Autoplay]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <Image
+                    style={{ backgroundSize: "contain" }}
+                    src={home1}
+                    alt=""
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    style={{ backgroundSize: "contain" }}
+                    src={home3}
+                    alt=""
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    style={{ backgroundSize: "contain" }}
+                    src={home4}
+                    alt=""
+                  />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
         )}
       </div>
       <div>

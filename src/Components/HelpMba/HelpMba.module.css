@@ -1,15 +1,22 @@
 .help {
   width: 100%;
-  padding: 2rem 9rem;
+  padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
 }
 
-.help > div {
+.help > div:nth-child(1) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   width: 100%;
+}
+
+.help > div:nth-child(2) {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -21,7 +28,7 @@
     padding: 0rem 1rem;
   }
 
-  .help > div {
+  .help > div:nth-child(2) {
     justify-content: center;
   }
 }

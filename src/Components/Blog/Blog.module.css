@@ -72,7 +72,7 @@
 
 .blog > div:nth-child(2) > div:nth-child(1) > p {
   font-size: 18px;
-  width: 90%;
+  width: 95%;
 }
 
 .blog > div:nth-child(2) > div:nth-child(2) {
@@ -94,6 +94,7 @@
 }
 
 .blog > div:nth-child(2) > div:nth-child(2) > section > h2 {
+  padding-left: 2rem;
   font-size: 2rem;
   color: #fecb02;
 }
