@@ -73,9 +73,12 @@ const Events = () => {
           </main>
           <div>
             <div>
-              <h4 style={{textTransform: 'uppercase'}}>
+              <h4 style={{ textTransform: "uppercase" }}>
                 {show.Date && new Date(show.Date.toDate()).getDate()}TH{" "}
-                {show.Date && new Date(show.Date.toDate()).toLocaleString('default', { month: 'short' })}{" "}
+                {show.Date &&
+                  new Date(show.Date.toDate()).toLocaleString("default", {
+                    month: "short",
+                  })}{" "}
                 {show.Date && new Date(show.Date.toDate()).getFullYear()}
               </h4>
               <h4>IST {show.Time}</h4>
@@ -93,8 +96,16 @@ const Events = () => {
               <div key={index}>
                 <div>
                   <div>
-                    <h6 style={{fontSize: '2.3rem'}}>{new Date(event.Date.toDate()).getDate()}</h6>
-                    <h6 style={{fontSize: '1rem', textTransform: 'uppercase'}}>{new Date(event.Date.toDate()).toLocaleString('default', { month: 'short' })}</h6>
+                    <h6 style={{ fontSize: "2.3rem" }}>
+                      {new Date(event.Date.toDate()).getDate()}
+                    </h6>
+                    <h6
+                      style={{ fontSize: "1rem", textTransform: "uppercase" }}
+                    >
+                      {new Date(event.Date.toDate()).toLocaleString("default", {
+                        month: "short",
+                      })}
+                    </h6>
                     <h6>{event.Time}</h6>
                   </div>
                   <div>
@@ -115,7 +126,16 @@ const Events = () => {
               <div key={index}>
                 <div>
                   <div>
-                    <h6>{new Date(event.Date.toDate()).toDateString()}</h6>
+                    <h6 style={{ fontSize: "2.3rem" }}>
+                      {new Date(event.Date.toDate()).getDate()}
+                    </h6>
+                    <h6
+                      style={{ fontSize: "1rem", textTransform: "uppercase" }}
+                    >
+                      {new Date(event.Date.toDate()).toLocaleString("default", {
+                        month: "short",
+                      })}
+                    </h6>
                     <h6>{event.Time}</h6>
                   </div>
                   <div>
