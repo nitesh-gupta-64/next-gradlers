@@ -9,7 +9,7 @@
   transform: rotate(180deg);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   #rev > img,
   #rev1 > img {
     height: 1rem;

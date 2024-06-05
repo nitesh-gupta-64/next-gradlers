@@ -163,6 +163,7 @@ const Showcase = () => {
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.image} alt="img" />
+              <i>{eve.createdAt && Math.floor((new Date() - new Date(eve.createdAt.toDate())) / (1000 * 60 * 60 * 24))} days ago</i>
               <p>"{eve.title}"</p>
             </div>
           ))}
@@ -170,6 +171,7 @@ const Showcase = () => {
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.Image} alt="img" />
+              <i>{eve.createdAt && Math.floor((new Date() - new Date(eve.createdAt.toDate())) / (1000 * 60 * 60 * 24))} days ago</i>
               <p>"{eve.Name}, {eve.Program} {eve.College}, {eve.Location}"</p>
             </div>
           ))}

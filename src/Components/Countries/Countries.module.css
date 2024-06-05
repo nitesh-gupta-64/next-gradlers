@@ -1,11 +1,11 @@
 .countries {
   width: 100%;
-  padding: 4rem 10rem;
+  padding: 1rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .countries p {
@@ -13,7 +13,7 @@
 }
 
 .countries > div:nth-child(2) {
-  width: 80%;
+  width: 100%;
 }
 
 .countries > div:nth-child(1) {
@@ -24,23 +24,29 @@
 
 @media screen and (max-width: 1400px) {
   .countries {
-    padding: 4rem 5rem;
+    padding: 1rem 5rem;
     align-items: center;
   }
 }
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   .countries {
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .countries {
     align-items: start;
   }
 }
 
 @media screen and (max-width: 800px) {
   .countries {
-    padding: 2rem 1rem;
-    gap: 4rem;
+    padding: 1rem 1rem;
+    gap: 0;
   }
   .countries {
     align-items: start;

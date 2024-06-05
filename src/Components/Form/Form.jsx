@@ -109,9 +109,9 @@ const Form = () => {
       </div>
       <div>
         <label>Interested in?</label>
-        <button className={styles.choose} onClick={() => setClicked(!clicked)}>
+        <a className={styles.choose} onClick={() => setClicked(!clicked)}>
           Choose...
-        </button>
+        </a>
         <div>
           {clicked && (
             <ul>

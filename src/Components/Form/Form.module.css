@@ -1,5 +1,5 @@
 .form {
-  width: 25rem;
+  width: 23rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
 }
 
 .form label {
-  font-size: 1.25rem;
+  font-size: 1.23rem;
   font-weight: 500;
 }
 
@@ -26,7 +26,7 @@
   width: 100%;
 }
 
-.form > div > div {
+.form > div:nth-child(3) > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@
 .form > div > input,
 .choose {
   background-color: #fff1bc;
-  width: 25rem;
+  width: 23rem;
   padding: 0.8rem 1rem;
   border-radius: 12px;
   border: none;
@@ -48,7 +48,7 @@
 
 .phone {
   background-color: #fff1bc;
-  width: 25rem;
+  width: 23rem;
   padding: 0.4rem 1rem;
   border-radius: 12px;
   border: none;
@@ -56,7 +56,7 @@
 
 .phone input {
   background-color: #fff1bc;
-  width: 25rem;
+  width: 23rem;
   padding: 0.4rem 1rem;
   border-radius: 12px;
   border: none;
@@ -71,8 +71,8 @@
   box-shadow: 0px 4px 24px 0px #00000040;
   color: white;
   font-weight: 500;
-  font-size: 1.25rem;
-  width: 25rem;
+  font-size: 1.23rem;
+  width: 23rem;
   border-radius: 12px;
   border: none;
   padding: 0.8rem 1rem;
@@ -96,6 +96,8 @@
   border: 1px solid #fecb02;
   background-color: #fffbed;
   border-radius: 12px;
+  position: absolute;
+
 }
 
 .form li {

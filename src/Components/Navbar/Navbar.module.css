@@ -8,7 +8,7 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   top: 6.4rem;
-  left: 2.15rem;
+  left: 2.5%;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
@@ -30,6 +30,10 @@
 .drop4,
 .drop5 {
   position: absolute;
+}
+
+.drop4 {
+  right: 0;
 }
 
 .navbar > ul > li > div,
@@ -71,7 +75,7 @@
 
 .navbar > ul > li > ul > li > ul {
   position: absolute;
-  top: -1rem;
+  top: 0;
   left: 14rem;
   background-color: white;
   border-radius: 1rem;
@@ -90,9 +94,29 @@
 
 @media screen and (max-width: 1488px) {
   .navbar > ul {
-    gap: 3rem;
+    gap: 7rem;
   }
 }
+
+
+@media screen and (max-width: 1420px) {
+  .navbar > ul {
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 1355px) {
+  .navbar > ul {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 1223px) {
+  .navbar > ul {
+    gap: 2rem;
+  }
+}
+
 
 @media screen and (max-width: 1150px) {
   .navbar h3 {
@@ -100,6 +124,15 @@
   }
   .navbar > ul {
     gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .navbar h3 {
+    font-size: 0.9rem;
+  }
+  .navbar > ul {
+    gap: 1.6rem;
   }
 }
 

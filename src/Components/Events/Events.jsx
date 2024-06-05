@@ -11,6 +11,16 @@ const Events = () => {
   const [recent, setRecent] = useState([]);
   const [show, setShow] = useState({});
 
+  const currentDate = new Date();
+
+  // Extract date components
+  const date = currentDate.getDate(); // Day of the month (1-31)
+  const month = currentDate.getMonth() + 1; // Month (0-11) - add 1 since months are zero-indexed
+  const year = currentDate.getFullYear(); // Full year (e.g., 2024)
+  const hours = currentDate.getHours(); // Hours (0-23)
+  const minutes = currentDate.getMinutes(); // Minutes (0-59)
+  const seconds = currentDate.getSeconds(); // Seconds (0-59)
+
   useEffect(() => {
     if (events && events.length > 0) {
       const upcomingEvents = events.filter(
@@ -63,11 +73,20 @@ const Events = () => {
           </p>
         </div>
         <div>
-          <h1>{show.Title}</h1>
+          <main>
+            <p style={{ color: "white" }}>Seminar on</p>
+            <div style={{ display: "flex", alignItems: "end", gap: "0.6rem" }}>
+              <h1 style={{ fontSize: "80px" }}>{show.Category}</h1>
+              <p style={{ paddingBottom: "0.9rem", color: "white" }}>in</p>
+            </div>
+            <h1>INDIA & ABROAD</h1>
+          </main>
           <div>
             <div>
-              <h4>
-                {show.Date && new Date(show.Date.toDate()).toDateString()}
+              <h4 style={{textTransform: 'uppercase'}}>
+                {show.Date && new Date(show.Date.toDate()).getDate()}TH{" "}
+                {show.Date && new Date(show.Date.toDate()).toLocaleString('default', { month: 'short' })}{" "}
+                {show.Date && new Date(show.Date.toDate()).getFullYear()}
               </h4>
               <h4>IST {show.Time}</h4>
             </div>
@@ -76,7 +95,7 @@ const Events = () => {
         </div>
         <div>
           <h6>{show.Description}</h6>
-          <img height={150} width={280} src={show.Image} alt="" />
+          <img height={130} width={250} src={show.Image} alt="" />
         </div>
         <div>
           {clicked === "up" && upcoming.length > 0 ? (
@@ -84,16 +103,17 @@ const Events = () => {
               <div key={index}>
                 <div>
                   <div>
-                    <h6>{new Date(event.Date.toDate()).toDateString()}</h6>
+                    <h6 style={{fontSize: '2.3rem'}}>{new Date(event.Date.toDate()).getDate()}</h6>
+                    <h6 style={{fontSize: '1rem', textTransform: 'uppercase'}}>{new Date(event.Date.toDate()).toLocaleString('default', { month: 'short' })}</h6>
                     <h6>{event.Time}</h6>
                   </div>
                   <div>
-                    <h6>{event.Title}</h6>
+                    <h6>Seminar on {event.Category} in INDIA & ABROAD</h6>
                     <h6>- {event.Location}</h6>
                   </div>
                 </div>
                 <p>
-                  <Link href='/countactus'>REGISTER NOW</Link>
+                  <Link href="/contactus">REGISTER NOW</Link>
                 </p>
               </div>
             ))
@@ -109,11 +129,13 @@ const Events = () => {
                     <h6>{event.Time}</h6>
                   </div>
                   <div>
-                    <h6>{event.Title}</h6>
+                    <h6>Seminar on {event.Category} in INDIA & ABROAD</h6>
                     <h6>- {event.Location}</h6>
                   </div>
                 </div>
-                <p><Link href='contactus'>REGISTER NOW</Link></p>
+                <p>
+                  <Link href="contactus">REGISTER NOW</Link>
+                </p>
               </div>
             ))
           ) : (

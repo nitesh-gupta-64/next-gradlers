@@ -103,9 +103,11 @@ const Blog = () => {
         {show ? (
           <div>
             <h2>{show.title}</h2>
-            <div>
-              <img src={show.image} />
-            </div>
+            <main>
+              <div>
+                <img src={show.image} />
+              </div>
+            </main>
             <p dangerouslySetInnerHTML={{ __html: show.description }} />
             {/* <p>{show.description}</p> */}
             <ul>{show.tags && show.tags.map((tag) => <li>{tag}</li>)}</ul>
@@ -115,30 +117,50 @@ const Blog = () => {
           <div>No Blogs to show related to this Category</div>
         )}
         <div>
-          <h2>MUST READ</h2>
+          <section>
+            <h2>MUST READ</h2>
+          </section>
           {show1 || show2 ? (
             <div>
               {show1 && (
-                <div>
+                <div
+                  onClick={() => {
+                    setShow(show1);
+                    setShow1(show);
+                  }}
+                >
                   <img src={show1.image} />
                   <div>
-                    <p>{show1.title}</p>
-                    <p>
-                      {show1.createdAt &&
-                        new Date(show1.createdAt.toDate()).toDateString()}
-                    </p>
+                    <p>{show1.seo && show1.seo.seoauthor}</p>
+                    <ul>
+                      <li>
+                        <p>
+                          {show1.createdAt &&
+                            new Date(show1.createdAt.toDate()).toDateString()}
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               )}
               {show2 && (
-                <div>
+                <div
+                  onClick={() => {
+                    setShow(show2);
+                    setShow2(show);
+                  }}
+                >
                   <img src={show2.image} />
                   <div>
-                    <p>{show2.title}</p>
-                    <p>
-                      {show2.createdAt &&
-                        new Date(show2.createdAt.toDate()).toDateString()}
-                    </p>
+                    <p>{show2.seo && show2.seo.seoauthor}</p>
+                    <ul>
+                      <li>
+                        <p>
+                          {show2.createdAt &&
+                            new Date(show2.createdAt.toDate()).toDateString()}
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               )}

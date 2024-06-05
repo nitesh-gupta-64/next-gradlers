@@ -74,7 +74,7 @@
 .show > div:nth-child(3) {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
   flex-wrap: wrap;
   gap: 2rem;
@@ -84,8 +84,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  align-items: start;
+  gap: 1rem;
+  width: 20rem;
 }
 
 .show > div:nth-child(3) > div > img {

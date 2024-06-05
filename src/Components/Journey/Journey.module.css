@@ -1,6 +1,6 @@
 .journey {
   width: 100%;
-  padding: 2rem 10rem;
+  padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -12,8 +12,7 @@
   font-size: 21px;
 }
 
-.journey > div,
-.journey > div > div {
+/* .journey > div > div {
   display: flex;
   justify-content: space-between;
 }
@@ -21,26 +20,31 @@
 .journey > div > div {
   gap: 4rem;
   justify-content: space-between;
-}
+  width: 45%;
+} */
 
 .journey img {
   margin-top: 2rem;
 }
 
 .journey > div {
+  display: flex;
   height: 30rem;
   width: 100%;
-  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 3rem; */
 }
 
-.journey > div > div > div:nth-child(1) {
+.journey > div > div:nth-child(1) {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
 }
 
-.journey > div > div > div:nth-child(1) > div {
+.journey > div > div:nth-child(1) > div {
   background-color: #fee580;
   width: 19rem;
   border-top-right-radius: 0.8rem;
@@ -52,14 +56,15 @@
   cursor: pointer;
 }
 
-.journey > div > div > div:nth-child(2) {
+.journey > div > div:nth-child(2) {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
 }
 
-.journey > div > div > div:nth-child(2) > div {
+.journey > div > div:nth-child(2) > div {
   width: 11.7rem;
   border-radius: 1rem;
   height: 4.375rem;
@@ -75,13 +80,16 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .journey img {
+    width: 25rem;
+    height: 18rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .journey {
     width: 100%;
     padding: 2rem 2rem;
-  }
-  .journey img {
-    width: 20rem;
-    height: 15rem;
   }
 }
 
@@ -99,12 +107,11 @@
   .journey p {
     font-size: 1rem;
   }
-  .journey > div,
-  .journey > div > div {
+  .journey > div {
     flex-direction: column;
     justify-content: center;
   }
-  .journey > div > div {
+  .journey > div {
     gap: 2rem;
   }
   .journey > div {
@@ -116,24 +123,27 @@
     margin-top: 1rem;
     height: 15rem;
     width: auto;
+    display: block;
   }
-  .journey > div > div > div:nth-child(1) {
+  .journey > div > div:nth-child(1) {
     flex-direction: row;
+    width: 100%;
   }
-  .journey > div > div > div:nth-child(1) > div {
+  .journey > div > div:nth-child(1) > div {
     width: auto;
     height: auto;
     padding: 1rem 1rem;
   }
-  .journey > div > div > div:nth-child(2) {
+  .journey > div > div:nth-child(2) {
     flex-direction: row;
+    width: 100%;
   }
-  .journey > div > div > div:nth-child(2) > div {
+  .journey > div > div:nth-child(2) > div {
     width: 5rem;
     height: auto;
     padding: 0.8rem 0.5rem;
   }
-  .journey > div > div > div:nth-child(2) > div > p {
+  .journey > div > div:nth-child(2) > div > p {
     font-size: 0.8rem;
   }
 }

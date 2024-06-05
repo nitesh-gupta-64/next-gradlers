@@ -28,19 +28,25 @@ const TestimonialsSwiper = () => {
 
         .swiper-slide > div {
             padding: 4rem 2rem;
+            gap: 2rem;
         }
 
-        .swiper-slide > div > img {
+        .swiper-slide > div > div > img {
             border-radius: 100%;
             width: 100px;
             height: 100px;
             object-fit: cover;
         }
-        .swiper-slide > div > h3 {
+        .swiper-slide > div > div {
+          display: flex;
+          justify-content: start;
+          gap: 3rem;
+        }
+        .swiper-slide > div > div > div > h3 {
             margin-top: 20px;
             margin-bottom: 10px;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
             .swiper {
                 width: 280px;
                 height: 180px;
@@ -49,12 +55,16 @@ const TestimonialsSwiper = () => {
                 width: 280px;
                 height: 180px;
                 padding: 1rem 1rem;
+                gap: 1rem;
             }
-            .swiper-slide > div > h3 {
+            .swiper-slide > div > div {
+              gap: 1rem;
+            }
+            .swiper-slide > div > div > div > h3 {
                 margin-top: 0.3rem;
                 margin-bottom: 0.1rem;
             }
-            .swiper-slide > div > img {
+            .swiper-slide > div > div > img {
                 width: 70px;
                 height: 70px;
             }
@@ -94,17 +104,15 @@ const TestimonialsSwiper = () => {
                 backgroundColor: "#fff",
               }}
             >
-              <img
-                src={testimonial.Image}
-                alt={testimonial.Name}
-              />
-              <h3>
-                {testimonial.Name}
-              </h3>
-              <p style={{ color: "#FFC107" }}>{testimonial.position}</p>
+              <div>
+                <img src={testimonial.Image} alt={testimonial.Name} />
+                <div>
+                  <h3>{testimonial.Name}</h3>
+                  <p style={{ color: "#FFC107" }}>{testimonial.Program}</p>
+                </div>
+              </div>
               <p style={{ textAlign: "center" }}>
-                {testimonial.Program} {testimonial.College} {testimonial.Year},{" "}
-                {testimonial.Location}
+                {testimonial.College} {testimonial.Year}, {testimonial.Location}
               </p>
             </div>
           </SwiperSlide>

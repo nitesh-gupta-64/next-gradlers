@@ -15,7 +15,7 @@ import { AppContext } from "@/Context/AppContext";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Cities = () => {
-  const {mb} = useContext(AppContext)
+  const { mb } = useContext(AppContext);
   return (
     <div className={styles.cities}>
       <div>
@@ -24,19 +24,29 @@ const Cities = () => {
       <div>
         <Swiper
           style={{
-            width: "1000px",
+            width: "80%",
             height: "300px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
           grabCursor={true}
           pagination={{ clickable: true }}
-          slidesPerView={4}
+          slidesPerView={mb ? 4 : 1}
           autoplay={{
             delay: 1000,
             disableOnInteraction: false,
           }}
           loop={true}
         >
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -60,7 +70,14 @@ const Cities = () => {
               <p>Delhi</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -84,7 +101,14 @@ const Cities = () => {
               <p>Mumbai</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -108,7 +132,14 @@ const Cities = () => {
               <p>Lukhnow</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -132,7 +163,14 @@ const Cities = () => {
               <p>Prayagraj</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -156,7 +194,14 @@ const Cities = () => {
               <p>Delhi</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -180,7 +225,14 @@ const Cities = () => {
               <p>Mumbai</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -204,7 +256,14 @@ const Cities = () => {
               <p>Lukhnow</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <div
               style={{
                 display: "flex",

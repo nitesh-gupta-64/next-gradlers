@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  padding: 4rem 10rem;
+  padding: 3rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -9,7 +9,7 @@
 }
 
 .about p {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .about > div > div {
@@ -18,9 +18,9 @@
   align-items: center;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
   .about {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     gap: 3rem;
   }
 }

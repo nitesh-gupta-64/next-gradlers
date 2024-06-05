@@ -12,7 +12,7 @@ const Journey = () => {
     <div className={styles.journey}>
       <h5>Begin your journey to the world's top universities</h5>
       <div>
-        <div>
+        
           <div>
             <div onClick={() => setClicked("testprep")} id={clicked === "testprep" && styles.clicked}>
               <p>Test Prep</p>
@@ -44,7 +44,7 @@ const Journey = () => {
                 </div>
               ))}
           </div>
-        </div>
+        
         <Image src={study} />
       </div>
     </div>
