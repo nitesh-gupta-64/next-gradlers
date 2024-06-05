@@ -136,7 +136,15 @@ const Blog = () => {
                       <li>
                         <p>
                           {show1.createdAt &&
-                            new Date(show1.createdAt.toDate()).toDateString()}
+                            new Date(show1.createdAt.toDate()).getDate()}{" "}
+                          {show1.createdAt &&
+                            new Date(show1.createdAt.toDate()).toLocaleString(
+                              "default",
+                              { month: "short" }
+                            )}
+                          ,{" "}
+                          {show1.createdAt &&
+                            new Date(show1.createdAt.toDate()).getFullYear()}
                         </p>
                       </li>
                     </ul>
@@ -156,8 +164,16 @@ const Blog = () => {
                     <ul>
                       <li>
                         <p>
+                        {show2.createdAt &&
+                            new Date(show2.createdAt.toDate()).getDate()}{" "}
                           {show2.createdAt &&
-                            new Date(show2.createdAt.toDate()).toDateString()}
+                            new Date(show2.createdAt.toDate()).toLocaleString(
+                              "default",
+                              { month: "short" }
+                            )}
+                          ,{" "}
+                          {show2.createdAt &&
+                            new Date(show2.createdAt.toDate()).getFullYear()}
                         </p>
                       </li>
                     </ul>

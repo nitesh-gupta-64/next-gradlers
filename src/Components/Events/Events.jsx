@@ -11,16 +11,6 @@ const Events = () => {
   const [recent, setRecent] = useState([]);
   const [show, setShow] = useState({});
 
-  const currentDate = new Date();
-
-  // Extract date components
-  const date = currentDate.getDate(); // Day of the month (1-31)
-  const month = currentDate.getMonth() + 1; // Month (0-11) - add 1 since months are zero-indexed
-  const year = currentDate.getFullYear(); // Full year (e.g., 2024)
-  const hours = currentDate.getHours(); // Hours (0-23)
-  const minutes = currentDate.getMinutes(); // Minutes (0-59)
-  const seconds = currentDate.getSeconds(); // Seconds (0-59)
-
   useEffect(() => {
     if (events && events.length > 0) {
       const upcomingEvents = events.filter(
