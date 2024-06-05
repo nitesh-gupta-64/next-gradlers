@@ -25,7 +25,7 @@
 }
 
 .admit > div:nth-child(2) > h2 {
-  background-color: #ffda47;
+  background-color: #fecb02;
   font-size: 29px;
   padding: 0.8rem 2rem;
   cursor: pointer;
@@ -33,7 +33,7 @@
 }
 
 #click {
-  background-color: #fecb02;
+  background-color: #ffae00;
 }
 
 .admit > div:nth-child(3) {
