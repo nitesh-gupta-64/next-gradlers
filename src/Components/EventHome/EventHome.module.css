@@ -1,5 +1,5 @@
 .event {
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@
 
 .event > h2 {
   font-size: 40px;
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .slide {
@@ -42,4 +42,53 @@
 .banner {
   background-color: #d9d9d9;
   width: 100%;
+  min-height: 80px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.banner h2 {
+  border-radius: 14px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#clicked {
+  background-color: #fecb02;
+}
+
+.admit {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 2.5rem;
+  gap: 2rem;
+}
+
+.admit > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: left;
+  gap: 0.8rem;
+  width: 330px;
+  height: 350px;
+}
+
+@media screen and (max-width: 806px) {
+    .admit {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 390px) {
+  .admit {
+    width: 98%;
+    padding: 2rem 0.5rem;
+  }
 }

@@ -11,8 +11,37 @@ import can from "../../../public/assets/images/can.png";
 SwiperCore.use([Navigation, Pagination]);
 
 const EventHome = () => {
-  const { mb, events } = useContext(AppContext);
+  const { mb, events, admitInfo } = useContext(AppContext);
   const [sortedEvents, setSortedEvents] = useState([]);
+  const [clicked, setClicked] = useState("a");
+  const [show, setShow] = useState([])
+
+  useEffect(() => {
+    if (clicked === "a") {
+        const data = admitInfo
+        setShow(data);
+      }
+    if (clicked === "gm") {
+      const data = admitInfo.filter((eve) => eve.Program === "GMAT");
+      setShow(data);
+    }
+    if (clicked === "gr") {
+      const data = admitInfo.filter((eve) => eve.Program === "GRE");
+      setShow(data);
+    }
+    if (clicked === "sa") {
+      const data = admitInfo.filter((eve) => eve.Program === "SAT");
+      setShow(data);
+    }
+    if (clicked === "ie") {
+      const data = admitInfo.filter((eve) => eve.Program === "IELTS");
+      setShow(data);
+    }
+    if (clicked === "to") {
+      const data = admitInfo.filter((eve) => eve.Program === "TOEFL");
+      setShow(data);
+    }
+  }, [admitInfo, clicked]);
 
   useEffect(() => {
     if (events && events.length > 0) {
@@ -90,7 +119,7 @@ const EventHome = () => {
                       textAlign: "center",
                       borderBottom: "1px solid white",
                       paddingBottom: "1rem",
-                      paddingTop: '0.6rem',
+                      paddingTop: "0.6rem",
                     }}
                   >
                     {eve.Title}
@@ -130,7 +159,52 @@ const EventHome = () => {
         </div>
       </div>
       <h2>Admissions</h2>
-      <div className={styles.banner}></div>
+      <div className={styles.banner}>
+        <h2
+          onClick={() => setClicked("a")}
+          id={clicked === "a" && styles.clicked}
+        >
+          All
+        </h2>
+        <h2
+          onClick={() => setClicked("gm")}
+          id={clicked === "gm" && styles.clicked}
+        >
+          GMAT
+        </h2>
+        <h2
+          onClick={() => setClicked("gr")}
+          id={clicked === "gr" && styles.clicked}
+        >
+          GRE
+        </h2>
+        <h2
+          onClick={() => setClicked("sa")}
+          id={clicked === "sa" && styles.clicked}
+        >
+          SAT
+        </h2>
+        <h2
+          onClick={() => setClicked("ie")}
+          id={clicked === "ie" && styles.clicked}
+        >
+          IELTS
+        </h2>
+        <h2
+          onClick={() => setClicked("to")}
+          id={clicked === "to" && styles.clicked}
+        >
+          TOEFL
+        </h2>
+      </div>
+      <div className={styles.admit}>
+          {show.map((ad) => (
+            <div>
+                <img width={320} height={216} style={{backgroundSize: 'cover'}} src={ad.Image} alt="" />
+                <h2 style={{fontSize: '22px', width: '320px'}}>{ad.Name} {ad.Program} {ad.College} {ad.Location}</h2>
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
