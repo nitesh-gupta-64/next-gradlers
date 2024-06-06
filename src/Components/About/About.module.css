@@ -1,0 +1,177 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 93%;
+}
+
+.about h2 {
+  font-weight: 500;
+}
+
+.about p {
+  font-size: 23px;
+}
+
+.about li {
+  font-size: 23px;
+}
+
+.about ul {
+  list-style-type: disc;
+  padding-left: 1.4rem;
+}
+
+.about b {
+  font-weight: 500;
+}
+
+.head {
+  padding: 2.5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.head h2 {
+  font-size: 58px;
+}
+
+.head b {
+  color: #fecb02;
+}
+
+.ab1 h2 {
+  font-size: 43px;
+}
+
+.ab1 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.ab1 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  width: 55%;
+}
+
+.ab2 h2 {
+  font-size: 43px;
+}
+
+.ab2 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.ab2 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+}
+
+.ab3 h2 {
+  font-size: 43px;
+}
+
+.ab3 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+
+.ab3 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+}
+
+.ab3 > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ab3 b {
+  font-size: 23px;
+}
+
+@media screen and (max-width: 1000px) {
+  .about p {
+    font-size: 18px;
+  }
+  .about li {
+    font-size: 18px;
+  }
+  .about img {
+    height: auto;
+    max-width: 90%;
+  }
+  .head h2 {
+    font-size: 48px;
+  }  
+  .ab1 h2 {
+    font-size: 32px;
+  }
+  .ab1 {
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .ab1 > div {
+    width: 100%;
+  }
+  .ab2 h2 {
+    font-size: 32px;
+  }
+  .ab2 {
+    align-items: center;
+    padding-top: 3rem;
+    gap: 2rem;
+    flex-direction: column;
+  } 
+  .ab2 > div {
+    width: 100%;
+    gap: 2rem;
+  }
+  .ab3 h2 {
+    font-size: 32px;
+  }
+  .ab3 {
+    align-items: center;
+    padding-top: 3rem;
+    gap: 2rem;
+    flex-direction: column;
+  } 
+  .ab3 > div {
+    width: 100%;
+    gap: 2rem;
+  }
+}

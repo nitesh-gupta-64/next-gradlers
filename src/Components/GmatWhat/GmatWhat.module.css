@@ -1,0 +1,129 @@
+.what {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.what p {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.boy h2 {
+  color: white;
+  background-color: #0a5495;
+  width: 100%;
+  padding: 0.8rem 3.5rem;
+  font-size: 32px;
+}
+
+.boy p {
+  padding-left: 3.5rem;
+  text-align: left;
+}
+
+.boy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boy > div:nth-child(1) {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 2rem;
+}
+
+.boy > div:nth-child(2) {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.girl h2 {
+  color: white;
+  background-color: #0a5495;
+  width: 100%;
+  padding: 0.8rem 3.5rem;
+  text-align: right;
+  font-size: 32px;
+}
+
+.girl p {
+  padding-right: 3.5rem;
+  text-align: right;
+}
+
+.girl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.girl > div:nth-child(2) {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 2rem;
+}
+
+.girl > div:nth-child(1) {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+@media screen and (max-width: 1000px) {
+  .what p {
+    font-size: 20px;
+  }
+  .boy h2 {
+    font-size: 28px;
+    padding: 0.8rem 1rem;
+  }
+  .boy p {
+    padding: 0 1rem;
+  }
+  .boy {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .boy > div:nth-child(1) {
+    width: 100%;
+  }
+  .boy > div:nth-child(2) {
+    width: 100%;
+  }
+  .girl h2 {
+    font-size: 28px;
+    padding: 0.8rem 1rem;
+  }
+  .girl p {
+    padding: 0 1rem;
+  }
+  .girl {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .girl > div:nth-child(1) {
+    width: 100%;
+    
+  }
+  .what img {
+    max-width: 90%;
+    height: auto;
+  }
+  .girl > div:nth-child(2) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.event {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event h2 {
+  font-weight: 500;
+}
+
+.event h3 {
+  color: black;
+  font-size: 100px;
+}
+
+.event > h2 {
+  font-size: 40px;
+  padding-top: 2rem;
+}
+
+.slide {
+  width: 100%;
+}
+
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 1.8rem;
+  gap: 3rem;
+}
+
+.but > div {
+  border: 1px solid black;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+
+.banner {
+  background-color: #d9d9d9;
+  width: 100%;
+}
