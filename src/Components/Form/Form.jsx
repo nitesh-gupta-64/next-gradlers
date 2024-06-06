@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { db } from "@/firebase/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "react-toastify/dist/ReactToastify.css";
+import toast from 'react-hot-toast';
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -55,10 +56,10 @@ const Form = () => {
         status: "Active",
         createdAt: serverTimestamp(),
       });
-      toast.success("Message sent successfully!");
+      toast("Message sent successfully!");
     } catch (error) {
       console.error("Error sending message:", error);
-      toast.error("Failed to send message. Please try again.");
+      toast("Failed to send message. Please try again.");
     }
     setName("");
     setEmail("");
@@ -112,7 +113,13 @@ const Form = () => {
       <div>
         <label>Interested in?</label>
         <a className={styles.choose} onClick={() => setClicked(!clicked)}>
-         Choose...
+         {tp ? (<p>Test Prep</p>): ''}
+         {fa ? (<p>Foreign Admissions</p>) : ''}
+         {vg ? (<p>Visa Guidance</p>) : ''}
+         {cc ? (<p>Career Counselling</p>) : ''}
+         {ii ? (<p>International Internships</p>) : ''}
+         {!tp && !fa && !vg && !cc && !ii && 'Choose...'}
+
         </a>
         <div>
           {clicked && (

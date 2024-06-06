@@ -5,6 +5,7 @@ import AppContextProvider from "@/Context/AppContext";
 import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +23,28 @@ export default function RootLayout({ children }) {
             <>
               <Header />
               {children}
-              <Footer/>
-              <ToastContainer/>
+              <Footer />
+              <Toaster
+                position="top-right"
+                reverseOrder={false}
+                toastOptions={{
+                  // Define default options
+                  duration: 5000,
+                  style: {
+                    background: "#363636",
+                    color: "#fff",
+                  },
+                  // Default options for specific types
+                  success: {
+                    duration: 3000,
+                    theme: {
+                      primary: "green",
+                      secondary: "black",
+                    },
+                  },
+                }}
+              />
+              <ToastContainer />
             </>
           </AppRouterCacheProvider>
         </AppContextProvider>

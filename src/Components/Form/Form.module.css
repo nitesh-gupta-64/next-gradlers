@@ -83,7 +83,15 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
   color: rgb(139, 139, 139);
+  height: auto;
+  gap: 0.5rem;
+}
+
+.choose p {
+  color: black;
+  font-size: 0.8rem;
 }
 
 .choose,
