@@ -67,7 +67,6 @@
   }
 }
 
-
 @media screen and (max-width: 800px) {
   .hero h2 {
     font-size: 1.75rem;
@@ -98,10 +97,11 @@
     gap: 0.5rem;
   }
   .hero > div:nth-child(2) {
+    display: flex;
     width: 100%;
-    align-items: start;
+    align-items: end;
+    justify-content: end;
     height: 70%;
-    display: block;
   }
   .hero > div:nth-child(2) > img:nth-child(2) {
     height: 100%;

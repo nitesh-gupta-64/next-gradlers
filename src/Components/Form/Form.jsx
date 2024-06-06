@@ -13,6 +13,7 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [interest, setInterest] = useState({});
+  const [interested, setInterested] = useState([]);
   const [isWhatsapp, setIsWhatsapp] = useState(false);
   const [tp, setTp] = useState(false);
   const [fa, setFa] = useState(false);
@@ -23,6 +24,7 @@ const Form = () => {
 
   useEffect(() => {
     setInterest({});
+    setInterested([]);
     tp
       ? setInterest((prev) => ({ ...prev, testprep: true }))
       : setInterest((prev) => ({ ...prev, testprep: false }));
@@ -61,12 +63,12 @@ const Form = () => {
     setName("");
     setEmail("");
     setPhone("");
-    setTp(false)
-    setCc(false)
-    setFa(false)
-    setIi(false)
-    setVg(false)
-    setClicked(false)
+    setTp(false);
+    setCc(false);
+    setFa(false);
+    setIi(false);
+    setVg(false);
+    setClicked(false);
   };
 
   return (
@@ -110,7 +112,7 @@ const Form = () => {
       <div>
         <label>Interested in?</label>
         <a className={styles.choose} onClick={() => setClicked(!clicked)}>
-          Choose...
+         Choose...
         </a>
         <div>
           {clicked && (

@@ -3,7 +3,7 @@ const data = {
   aboutUs1:
     "CollegeConnect was founded in 2019 with the sole purpose of helping out Indian students in pursuing their study abroad dream by making the process simpler, effective, and less time-consuming. We are highly determined to follow a personalized approach for each of our students and give our best in getting into their dream university. In the past few years, we have impacted the career of hundreds of students and continue to do more.",
   testPrep: ['GMAT', 'GRE', 'SAT', 'IELTS', 'TOEFL'],
-  programs: ['Undergrad', 'Masters', 'MBA', 'PHD', 'MS'],
+  programs: ['UG', 'Masters', 'MBA', 'PHD', 'MS'],
   country: ['Canada', 'Australia', 'USA', 'France', 'India'],
 };
 
