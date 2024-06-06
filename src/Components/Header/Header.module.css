@@ -18,7 +18,7 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
-  padding-bottom: 3rem;
+  /* padding-bottom: 3rem; */
   color: white;
 }
 
@@ -66,6 +66,10 @@
 .header > div:nth-child(1) > div:nth-child(1) > a:nth-child(2) > img {
     display: none;
     filter: invert(100%);
+}
+
+.header > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img {
+  margin-top: 0.6rem;
 }
 
 @media screen and (max-width: 1150px) {
