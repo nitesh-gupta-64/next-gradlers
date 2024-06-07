@@ -114,7 +114,7 @@ const EventHome = () => {
                 >
                   <h2
                     style={{
-                      fontSize: "18px",
+                      fontSize: "16px",
                       width: "100%",
                       textAlign: "center",
                       borderBottom: "1px solid white",
@@ -203,7 +203,7 @@ const EventHome = () => {
             <img
               width={300}
               height={216}
-              style={{ backgroundSize: "cover" }}
+              style={{ backgroundSize: "contain" }}
               src={ad.Image}
               alt=""
             />
