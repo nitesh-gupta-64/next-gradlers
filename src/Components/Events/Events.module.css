@@ -237,6 +237,7 @@
   }
   .events > div > div:nth-child(3) > h6 {
     font-size: 18px;
+    padding-bottom: 1rem;
   }
   .events > div > div:nth-child(4) {
     margin-top: 2rem;

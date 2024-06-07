@@ -94,6 +94,10 @@
   width: 20rem;
 }
 
+.show > div:nth-child(3) p {
+  font-weight: 500;
+}
+
 .show > div:nth-child(3) > div > img {
   box-shadow: 0px 8px 24.1px 0px #00000040;
   border-radius: 0.75rem;

@@ -5,6 +5,7 @@ import { AppContext } from "@/Context/AppContext";
 import bl from "../../../public/assets/images/blogs.png";
 import eve from "../../../public/assets/images/calender.png";
 import suc from "../../../public/assets/images/ss.png";
+import clock from "../../../public/assets/images/clock.png";
 import Image from "next/image";
 
 const Showcase = () => {
@@ -163,25 +164,45 @@ const Showcase = () => {
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.image} alt="img" />
-              <i>{eve.createdAt && Math.floor((new Date() - new Date(eve.createdAt.toDate())) / (1000 * 60 * 60 * 24))} days ago</i>
+              <i>
+                {" "}
+                <Image src={clock} />{" "}
+                {eve.createdAt &&
+                  Math.floor(
+                    (new Date() - new Date(eve.createdAt.toDate())) /
+                      (1000 * 60 * 60 * 24)
+                  )}{" "}
+                days ago
+              </i>
               <p>"{eve.title}"</p>
             </div>
           ))}
-          {clicked === "ss" &&
+        {clicked === "ss" &&
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.Image} alt="img" />
-              <i>{eve.createdAt && Math.floor((new Date() - new Date(eve.createdAt.toDate())) / (1000 * 60 * 60 * 24))} days ago</i>
-              <p>"{eve.Name}, {eve.Program} {eve.College}, {eve.Location}"</p>
+              <i>
+                {" "}
+                <Image src={clock} />{" "}
+                {eve.createdAt &&
+                  Math.floor(
+                    (new Date() - new Date(eve.createdAt.toDate())) /
+                      (1000 * 60 * 60 * 24)
+                  )}{" "}
+                days ago
+              </i>
+              <p>
+                "{eve.Name}, {eve.Program} {eve.College}, {eve.Location}"
+              </p>
             </div>
           ))}
-          {clicked === "events" &&
+        {clicked === "events" &&
           showP.map((eve) => (
             <div>
               <img width={320} height={240} src={eve.Image} alt="img" />
               <p>"{eve.Title}"</p>
             </div>
-          ))}        
+          ))}
       </div>
     </div>
   );

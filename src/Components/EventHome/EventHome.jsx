@@ -14,13 +14,13 @@ const EventHome = () => {
   const { mb, events, admitInfo } = useContext(AppContext);
   const [sortedEvents, setSortedEvents] = useState([]);
   const [clicked, setClicked] = useState("a");
-  const [show, setShow] = useState([])
+  const [show, setShow] = useState([]);
 
   useEffect(() => {
     if (clicked === "a") {
-        const data = admitInfo
-        setShow(data);
-      }
+      const data = admitInfo;
+      setShow(data);
+    }
     if (clicked === "gm") {
       const data = admitInfo.filter((eve) => eve.Program === "GMAT");
       setShow(data);
@@ -58,7 +58,7 @@ const EventHome = () => {
         <Swiper
           style={{
             width: "100%",
-            height: "500px",
+            height: "480px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -86,8 +86,8 @@ const EventHome = () => {
                   alignItems: "center",
                   justifyContent: "space-between",
                   flexDirection: "column",
-                  width: "365px",
-                  height: "426px",
+                  width: "340px",
+                  height: "390px",
                   padding: "1rem",
                   backgroundColor: "#0A5495",
                   color: "white",
@@ -114,7 +114,7 @@ const EventHome = () => {
                 >
                   <h2
                     style={{
-                      fontSize: "20px",
+                      fontSize: "18px",
                       width: "100%",
                       textAlign: "center",
                       borderBottom: "1px solid white",
@@ -129,7 +129,7 @@ const EventHome = () => {
                     {"- "}
                     {eve.Location}
                   </h2> */}
-                  <h2 style={{ fontSize: "16px" }}>
+                  <h2 style={{ fontSize: "14px" }}>
                     {eve.Date && new Date(eve.Date.toDate()).getDate()}-
                     {eve.Date &&
                       new Date(eve.Date.toDate()).toLocaleString("default", {
@@ -139,7 +139,7 @@ const EventHome = () => {
                   </h2>
                   <button
                     style={{
-                      fontSize: "18px",
+                      fontSize: "16px",
                       padding: "0.5rem",
                       width: "256px",
                       border: "none",
@@ -198,12 +198,20 @@ const EventHome = () => {
         </h2>
       </div>
       <div className={styles.admit}>
-          {show.map((ad) => (
-            <div>
-                <img width={320} height={216} style={{backgroundSize: 'cover'}} src={ad.Image} alt="" />
-                <h2 style={{fontSize: '22px', width: '320px'}}>{ad.Name} {ad.Program} {ad.College} {ad.Location}</h2>
-            </div>
-          ))}
+        {show.map((ad) => (
+          <div>
+            <img
+              width={300}
+              height={216}
+              style={{ backgroundSize: "cover" }}
+              src={ad.Image}
+              alt=""
+            />
+            <h2 style={{ fontSize: "19px", width: "300px" }}>
+              {ad.Name} {" - "} <b>{ad.Program}</b>{", "} {ad.College}
+            </h2>
+          </div>
+        ))}
       </div>
     </div>
   );

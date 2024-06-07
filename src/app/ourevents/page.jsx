@@ -6,7 +6,7 @@ import eh from "../../../public/assets/images/eh.png";
 const page = () => {
   return (
     <div className="events">
-      <Image style={{height: 'auto', width: '100%'}} src={eh} />
+      <Image style={{ width: '100%'}} src={eh} />
       <EventHome />
     </div>
   );
