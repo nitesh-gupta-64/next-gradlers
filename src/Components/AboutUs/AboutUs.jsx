@@ -10,7 +10,7 @@ const AboutUs = () => {
       <h5>About Us</h5>
       <div>
         <div> 
-          <p>{data.aboutUs}</p>
+          <p>{data.aboutUs} {data.aboutUs}</p>
           <Image width={700} src={about} />
         </div>
         

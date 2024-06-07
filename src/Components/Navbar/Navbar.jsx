@@ -116,6 +116,12 @@ const Navbar = () => {
                 <Link href="/success">Success Stories</Link>
               </li>
               <li>
+                <Link href="/blogs">Blogs</Link>
+              </li>
+              <li>
+                <Link href="/ourevents">Events</Link>
+              </li>
+              <li>
                 <Link href="/counselling">Undergrad</Link>
               </li>
               <li>

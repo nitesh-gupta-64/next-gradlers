@@ -8,7 +8,7 @@
 }
 
 .what p {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -22,7 +22,7 @@
 
 .boy p {
   padding-left: 3.5rem;
-  text-align: left;
+  text-align: justify;
 }
 
 .boy {
@@ -47,6 +47,11 @@
   align-items: end;
 }
 
+.what img {
+  width: 43%;
+  height: auto;
+}
+
 .girl h2 {
   color: white;
   background-color: #0a5495;
@@ -58,7 +63,7 @@
 
 .girl p {
   padding-right: 3.5rem;
-  text-align: right;
+  text-align: justify;
 }
 
 .girl {
@@ -85,7 +90,7 @@
 
 @media screen and (max-width: 1000px) {
   .what p {
-    font-size: 20px;
+    font-size: 16px;
   }
   .boy h2 {
     font-size: 28px;

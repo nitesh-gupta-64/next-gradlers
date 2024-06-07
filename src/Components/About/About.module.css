@@ -11,11 +11,13 @@
 }
 
 .about p {
-  font-size: 23px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .about li {
-  font-size: 23px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .about ul {
@@ -125,10 +127,10 @@
 
 @media screen and (max-width: 1000px) {
   .about p {
-    font-size: 18px;
+    font-size: 16px;
   }
   .about li {
-    font-size: 18px;
+    font-size: 16px;
   }
   .about img {
     height: auto;

@@ -11,7 +11,7 @@ const Admits = () => {
 
   useEffect(() => {
     if (admitInfo && admitInfo.length > 0) {
-      const ss = admitInfo.filter((admit) => admit.URL);
+      const ss = admitInfo.filter((admit) => admit.URLL);
       setSuccess(ss);
       console.log(ss);
     }
