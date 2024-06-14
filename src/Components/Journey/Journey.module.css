@@ -139,11 +139,11 @@
     width: 100%;
   }
   .journey > div > div:nth-child(2) > div {
-    width: 5rem;
+    width: 3rem;
     height: auto;
-    padding: 0.8rem 0.5rem;
+    padding: 0.8rem 0.1rem;
   }
   .journey > div > div:nth-child(2) > div > p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }

@@ -4,15 +4,18 @@ import styles from "./Blog.module.css";
 import Image from "next/image";
 import { AppContext } from "@/Context/AppContext";
 import Form from "../Form/Form";
+import { useRouter } from "next/navigation";
 
-const Blog = () => {
-  const { blogs } = useContext(AppContext);
+const Blog = ({params}) => {
+  const { blogs, mb } = useContext(AppContext);
 
   const [clicked, setClicked] = useState("");
   const [show, setShow] = useState({});
   const [show1, setShow1] = useState({});
   const [show2, setShow2] = useState({});
   const [sorted, setSorted] = useState([]);
+  const router = useRouter();
+  // const {categoryId, blogId} = params
 
   useEffect(() => {
     if (blogs && blogs.length > 0) {
@@ -69,31 +72,46 @@ const Blog = () => {
     <div className={styles.blog}>
       <div>
         <p
-          onClick={() => setClicked("gm")}
+          onClick={() => {
+            setClicked("gm");
+            
+          }}
           id={clicked === "gm" && styles.clicked}
         >
           GMAT
         </p>
         <p
-          onClick={() => setClicked("gr")}
+          onClick={() => {
+            setClicked("gr")
+            
+          }}
           id={clicked === "gr" && styles.clicked}
         >
           GRE
         </p>
         <p
-          onClick={() => setClicked("mp")}
+          onClick={() => {
+            setClicked("mp")
+            
+          }}
           id={clicked === "mp" && styles.clicked}
         >
           Masters & PhD
         </p>
         <p
-          onClick={() => setClicked("ug")}
+          onClick={() => {
+            setClicked("ug")
+            
+          }}
           id={clicked === "ug" && styles.clicked}
         >
           Undergraduate
         </p>
         <p
-          onClick={() => setClicked("it")}
+          onClick={() => {
+            setClicked("it")
+           
+          }}
           id={clicked === "it" && styles.clicked}
         >
           IELTS/TOEFL
@@ -117,72 +135,76 @@ const Blog = () => {
           <div>No Blogs to show related to this Category</div>
         )}
         <div>
-          <section>
-            <h2>MUST READ</h2>
-          </section>
-          {show1 || show2 ? (
-            <div>
-              {show1 && (
-                <div
-                  onClick={() => {
-                    setShow(show1);
-                    setShow1(show);
-                  }}
-                >
-                  <img src={show1.image} />
-                  <div>
-                    <p>{show1.seo && show1.seo.seoauthor}</p>
-                    <ul>
-                      <li>
-                        <p>
-                          {show1.createdAt &&
-                            new Date(show1.createdAt.toDate()).getDate()}{" "}
-                          {show1.createdAt &&
-                            new Date(show1.createdAt.toDate()).toLocaleString(
-                              "default",
-                              { month: "short" }
-                            )}
-                          ,{" "}
-                          {show1.createdAt &&
-                            new Date(show1.createdAt.toDate()).getFullYear()}
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
+          {mb && (
+            <>
+              <section>
+                <h2>MUST READ</h2>
+              </section>
+              {show1 || show2 ? (
+                <div>
+                  {show1 && (
+                    <div
+                      
+                    >
+                      <img src={show1.image} />
+                      <div>
+                        <p>{show1.seo && show1.seo.seoauthor}</p>
+                        <ul>
+                          <li>
+                            <p>
+                              {show1.createdAt &&
+                                new Date(
+                                  show1.createdAt.toDate()
+                                ).getDate()}{" "}
+                              {show1.createdAt &&
+                                new Date(
+                                  show1.createdAt.toDate()
+                                ).toLocaleString("default", { month: "short" })}
+                              ,{" "}
+                              {show1.createdAt &&
+                                new Date(
+                                  show1.createdAt.toDate()
+                                ).getFullYear()}
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {show2 && (
+                    <div
+                      
+                    >
+                      <img src={show2.image} />
+                      <div>
+                        <p>{show2.seo && show2.seo.seoauthor}</p>
+                        <ul>
+                          <li>
+                            <p>
+                              {show2.createdAt &&
+                                new Date(
+                                  show2.createdAt.toDate()
+                                ).getDate()}{" "}
+                              {show2.createdAt &&
+                                new Date(
+                                  show2.createdAt.toDate()
+                                ).toLocaleString("default", { month: "short" })}
+                              ,{" "}
+                              {show2.createdAt &&
+                                new Date(
+                                  show2.createdAt.toDate()
+                                ).getFullYear()}
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
                 </div>
+              ) : (
+                <div>No more Blogs related to this Category</div>
               )}
-              {show2 && (
-                <div
-                  onClick={() => {
-                    setShow(show2);
-                    setShow2(show);
-                  }}
-                >
-                  <img src={show2.image} />
-                  <div>
-                    <p>{show2.seo && show2.seo.seoauthor}</p>
-                    <ul>
-                      <li>
-                        <p>
-                        {show2.createdAt &&
-                            new Date(show2.createdAt.toDate()).getDate()}{" "}
-                          {show2.createdAt &&
-                            new Date(show2.createdAt.toDate()).toLocaleString(
-                              "default",
-                              { month: "short" }
-                            )}
-                          ,{" "}
-                          {show2.createdAt &&
-                            new Date(show2.createdAt.toDate()).getFullYear()}
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div>No more Blogs related to this Category</div>
+            </>
           )}
           <p>Request a Call Back</p>
           <section>
