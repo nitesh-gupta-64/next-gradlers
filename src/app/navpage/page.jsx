@@ -37,7 +37,7 @@ const NavPage = () => {
           <ul>
             <li>
               <p>
-                <Link href="/blogs">Blogs</Link>
+                <Link href="/blogs/category/slug">Blogs</Link>
               </p>
             </li>
             <li>
