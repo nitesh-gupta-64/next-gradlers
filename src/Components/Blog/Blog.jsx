@@ -4,9 +4,9 @@ import styles from "./Blog.module.css";
 import Image from "next/image";
 import { AppContext } from "@/Context/AppContext";
 import Form from "../Form/Form";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
-const Blog = ({params}) => {
+const Blog = () => {
   const { blogs, mb } = useContext(AppContext);
 
   const [clicked, setClicked] = useState("");
@@ -15,7 +15,8 @@ const Blog = ({params}) => {
   const [show2, setShow2] = useState({});
   const [sorted, setSorted] = useState([]);
   const router = useRouter();
-  // const {categoryId, blogId} = params
+  const params = useParams();
+  const { categoryId, blogId } = params;
 
   useEffect(() => {
     if (blogs && blogs.length > 0) {
@@ -68,13 +69,16 @@ const Blog = ({params}) => {
     }
   }, [clicked, sorted]);
 
+  // useEffect(() => {
+  //   router.push(`/blogs/${show.category}/${show.slug}`, { shallow: true });
+  // }, [show]);
+
   return (
     <div className={styles.blog}>
       <div>
         <p
           onClick={() => {
             setClicked("gm");
-            
           }}
           id={clicked === "gm" && styles.clicked}
         >
@@ -82,8 +86,7 @@ const Blog = ({params}) => {
         </p>
         <p
           onClick={() => {
-            setClicked("gr")
-            
+            setClicked("gr");
           }}
           id={clicked === "gr" && styles.clicked}
         >
@@ -91,8 +94,7 @@ const Blog = ({params}) => {
         </p>
         <p
           onClick={() => {
-            setClicked("mp")
-            
+            setClicked("mp");
           }}
           id={clicked === "mp" && styles.clicked}
         >
@@ -100,8 +102,7 @@ const Blog = ({params}) => {
         </p>
         <p
           onClick={() => {
-            setClicked("ug")
-            
+            setClicked("ug");
           }}
           id={clicked === "ug" && styles.clicked}
         >
@@ -109,8 +110,7 @@ const Blog = ({params}) => {
         </p>
         <p
           onClick={() => {
-            setClicked("it")
-           
+            setClicked("it");
           }}
           id={clicked === "it" && styles.clicked}
         >
@@ -143,9 +143,7 @@ const Blog = ({params}) => {
               {show1 || show2 ? (
                 <div>
                   {show1 && (
-                    <div
-                      
-                    >
+                    <div>
                       <img src={show1.image} />
                       <div>
                         <p>{show1.seo && show1.seo.seoauthor}</p>
@@ -172,9 +170,7 @@ const Blog = ({params}) => {
                     </div>
                   )}
                   {show2 && (
-                    <div
-                      
-                    >
+                    <div>
                       <img src={show2.image} />
                       <div>
                         <p>{show2.seo && show2.seo.seoauthor}</p>

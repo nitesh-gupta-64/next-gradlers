@@ -116,7 +116,7 @@ const Navbar = () => {
                 <Link href="/success">Success Stories</Link>
               </li>
               <li>
-                <Link href="/blogs/GMAT/right-way-to-take-benefit-of-neet-mock-tests-before-final-exam">Blogs</Link>
+                <Link href="/blogs/categoryId/blogId">Blogs</Link>
               </li>
               <li>
                 <Link href="/ourevents">Events</Link>

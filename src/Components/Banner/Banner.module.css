@@ -1,0 +1,52 @@
+.banner {
+  background-color: #0a5495;
+  display: flex;
+  padding: 2rem;
+  padding-left: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.banner img {
+  height: 8.1rem;
+  width: auto;
+  background-size: contain;
+}
+
+.banner > div {
+  width: 50%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banner > div > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.banner > div > div > h4 {
+  padding: 0.8rem 2rem;
+  font-size: 12px;
+  text-align: end;
+}
+
+.banner > div > div > h4:nth-child(1) {
+  background-color: #fee580;
+}
+
+.banner > div > div > h4:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+
+.banner > div > h4 {
+  color: white;
+  font-size: 12px;
+}

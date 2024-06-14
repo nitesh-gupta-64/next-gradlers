@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+.ban {
+  display: flex;
+}
+
 @media screen and (max-width: 1200px) {
   .about {
     padding: 3rem 2rem;

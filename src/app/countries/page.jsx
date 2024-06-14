@@ -1,8 +1,9 @@
+import USA from '@/Components/USA/USA'
 import React from 'react'
 
 const page = () => {
   return (
-    <div></div>
+    <USA/>
   )
 }
 

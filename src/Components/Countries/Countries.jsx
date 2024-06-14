@@ -24,19 +24,20 @@ const Countries = () => {
       <div>
         <Swiper
           style={{
-            width: "80%",
+            width: "100%",
             height: "350px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
+          spaceBetween={40}
           grabCursor={true}
           pagination={{
             clickable: true,
             dynamicBullets: true,
             dynamicMainBullets: 3,
           }}
-          slidesPerView={mb ? 4 : 1}
+          slidesPerView={mb ? 4 : 2}
           autoplay={{
             delay: 1000,
             disableOnInteraction: false,

@@ -1,5 +1,5 @@
 import About from "@/Components/About/About";
-import React from "react";
+
 
 const Page = () => {
   return (
