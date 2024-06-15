@@ -1,7 +1,7 @@
 .admit {
   width: 95%;
   border-radius: 22px;
-  background-color: #0a5495;
+  background-color: #4267b1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
 }
 
 .admit > div:nth-child(2) > h2 {
-  background-color: #fecb02;
+  background-color: #fdc010;
   font-size: 29px;
   padding: 0.8rem 2rem;
   cursor: pointer;

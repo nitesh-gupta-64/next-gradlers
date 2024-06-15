@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fecb02;
+  background: #fdc010;
 }
 
 .show > div:nth-child(1) > div:nth-child(1) {
@@ -50,7 +50,7 @@
 }
 
 #clicked {
-  background-color: #0a5495;
+  background-color: #4267b1;
 }
 
 .show > div:nth-child(2) {
@@ -73,7 +73,7 @@
 }
 
 #click {
-  background-color: #fecb02;
+  background-color: #fdc010;
 }
 
 .show > div:nth-child(3) {

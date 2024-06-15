@@ -15,12 +15,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fecb02;
+  background-color: #fdc010;
   padding: 0.5rem 0;
 }
 
 .card > div:nth-child(2) > p:nth-child(1) {
-  background-color: #fecb02;
+  background-color: #fdc010;
   color: white;
   font-weight: 500;
   font-size: 22px;

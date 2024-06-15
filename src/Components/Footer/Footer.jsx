@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import Image from "next/image";
-import logo from "../../../public/assets/images/logo.png";
+import logo from "../../../public/assets/images/lg1.png";
 import fb from "../../../public/assets/images/facebook.png";
 import x from "../../../public/assets/images/twitter.png";
 import insta from "../../../public/assets/images/insta.png";
@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
       <div>
         <div>
-          <Image src={logo} />
+          <Image style={{height: 'auto', width: '10rem'}} src={logo} />
           <p>
             Gradlers aims to help applicants make informed choices about global
             education opportunities while providing holistic guidance to

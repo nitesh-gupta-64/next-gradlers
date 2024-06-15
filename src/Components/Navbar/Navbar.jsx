@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Navbar.module.css";
 import search from "../../../public/assets/images/search.png";
 import Image from "next/image";
 import Link from "next/link";
 import drop from "../../../public/assets/images/drop.png";
 import dropp from "../../../public/assets/images/drop1.png";
+import { AppContext } from "@/Context/AppContext";
 
 const Navbar = () => {
   const [drop1, setDrop1] = useState(false);
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [drop3, setDrop3] = useState(false);
   const [drop4, setDrop4] = useState(false);
   const [drop5, setDrop5] = useState(false);
+  const {gm} = useContext(AppContext)
   return (
     <div className={styles.navbar}>
       <ul>
@@ -116,7 +118,7 @@ const Navbar = () => {
                 <Link href="/success">Success Stories</Link>
               </li>
               <li>
-                <Link href="/blogs/categoryId/blogId">Blogs</Link>
+                <Link href={`/blogs/gmat/${gm && Object.keys(gm).length === 0 ? 'noblog' : gm?.slug || 'noblog'}`}>Blogs</Link>
               </li>
               <li>
                 <Link href="/ourevents">Events</Link>

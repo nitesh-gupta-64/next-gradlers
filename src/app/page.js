@@ -7,6 +7,7 @@ import Achievements from "@/Components/Achievements/Achievements";
 import Countries from "@/Components/Countries/Countries";
 import Events from "@/Components/Events/Events";
 import Showcase from "@/Components/Showcase/Showcase";
+import 'leaflet/dist/leaflet.css';
 
 export default function Home() {
   return (

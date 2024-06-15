@@ -11,6 +11,12 @@ function AppContextProvider({ children }) {
   const [events, setEvents] = useState([]);
   const [admitInfo, setAdmitInfo] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const [gm, setGm] = useState({});
+  const [gr, setGr] = useState({});
+  const [ma, setMa] = useState({});
+  const [ug, setUg] = useState({});
+  const [ie, setIe] = useState({});
+  const [sorted, setSorted] = useState([]);
 
   const fetchEvents = async () => {
     try {
@@ -49,6 +55,29 @@ function AppContextProvider({ children }) {
         ...doc.data(),
       }));
       setBlogs(data);
+      const sortedBlogs = [...data].sort(
+        (b, a) =>
+          new Date(a.createdAt.toDate()) - new Date(b.createdAt.toDate())
+      );
+      setSorted(sortedBlogs);
+      console.log(sortedBlogs);
+
+      const data5 = sortedBlogs.filter((blog) => blog.category === "GMAT");
+      setGm(data5[0]);
+      const data1 = sortedBlogs.filter((blog) => blog.category === "GRE");
+      setGr(data1[0]);
+      const data2 = sortedBlogs.filter(
+        (blog) => blog.category === "Masters" || blog.category === "PhD"
+      );
+      setMa(data2[0]);
+      const data3 = sortedBlogs.filter(
+        (blog) => blog.category === "Undergraduate"
+      );
+      setUg(data3[0]);
+      const data4 = sortedBlogs.filter(
+        (blog) => blog.category === "IELTS" || blog.category === "TOEFL"
+      );
+      setIe(data4[0]);
     } catch (error) {
       console.error("Error fetching Blogs:", error);
     }
@@ -67,6 +96,13 @@ function AppContextProvider({ children }) {
     admitInfo,
     blogs,
     mb,
+    gm,
+    gr,
+    ma,
+    ug,
+    ie,
+    sorted,
+    setSorted,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

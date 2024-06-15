@@ -1,12 +1,14 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import styles from "./navpage.module.css";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/navigation";
+import { AppContext } from "@/Context/AppContext";
 
 const NavPage = () => {
   const router = useRouter();
+  const { gm } = useContext(AppContext);
   return (
     <div className={styles.nav}>
       <ul>
@@ -37,7 +39,15 @@ const NavPage = () => {
           <ul>
             <li>
               <p>
-                <Link href="/blogs/category/slug">Blogs</Link>
+                <Link
+                  href={`/blogs/gmat/${
+                    gm && Object.keys(gm).length === 0
+                      ? "noblog"
+                      : gm?.slug || "noblog"
+                  }`}
+                >
+                  Blogs
+                </Link>
               </p>
             </li>
             <li>

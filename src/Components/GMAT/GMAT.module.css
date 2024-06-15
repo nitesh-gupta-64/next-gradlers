@@ -23,7 +23,7 @@
 
 .gmat h2 {
   color: white;
-  background-color: #0a5495;
+  background-color: #4267b1;
   width: 120%;
   padding: 0.8rem 1rem;
   font-size: 32px;
@@ -44,7 +44,7 @@
   font-size: 1.5rem;
   padding: 0.7rem 2rem;
   margin-left: 0.8rem;
-  background-color: #fecb02;
+  background-color: #fdc010;
   border-radius: 1rem;
 }
 
@@ -82,7 +82,7 @@
     font-size: 1.5rem;
     padding: 0.7rem 2rem;
     margin-left: 0.8rem;
-    background-color: #fecb02;
+    background-color: #fdc010;
     border-radius: 1rem;
   }
 }

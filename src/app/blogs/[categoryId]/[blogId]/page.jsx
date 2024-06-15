@@ -1,9 +1,10 @@
-import Blog from '@/Components/Blog/Blog'
+
+import BlogProp from '@/Components/BlogProp/BlogProp'
 import React from 'react'
 
 const page = () => {
   return (
-    <Blog/>
+    <BlogProp/>
   )
 }
 
