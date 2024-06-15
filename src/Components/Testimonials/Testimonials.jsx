@@ -21,7 +21,11 @@ const TestimonialsSwiper = () => {
   return (
     <div className={styles.testi}>
       <style>{`
-        .swiper, .swiper-slide > div {
+        .swiper {
+            width: 650px;
+            height: 400px;
+        }
+        .swiper-slide > div {
             width: 650px;
             height: 340px;
         }
@@ -34,8 +38,8 @@ const TestimonialsSwiper = () => {
 
         .swiper-slide > div > div > img {
             border-radius: 100%;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
         }
         .swiper-slide > div > div {
@@ -48,6 +52,16 @@ const TestimonialsSwiper = () => {
             margin-top: 20px;
             margin-bottom: 10px;
         }
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background-color: #FFF1BC;
+          opacity: 1;
+        }
+
+      .swiper-pagination-bullet-active {
+        background-color: #FFC107;
+      }
         @media screen and (max-width: 900px) {
             .swiper {
                 width: 280px;
@@ -72,24 +86,20 @@ const TestimonialsSwiper = () => {
             }
         }
       `}</style>
-      <div
-        className="swiper-button-pre"
-        id={styles.rev}
-        style={navButtonStyles1}
-      >
-        {/* <Image src={arrow} /> */}
-        {"<"}
-      </div>
       <Swiper
         className={styles.swi}
         style={{
-          boxShadow: "0px 7px 24px 0px #00000040",
           borderRadius: "10px",
         }}
         grabCursor={true}
-        navigation={{
-          nextEl: ".swiper-button-nex",
-          prevEl: ".swiper-button-pre",
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 3,
+        }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
         }}
         slidesPerView={1}
         loop={true}
@@ -114,44 +124,15 @@ const TestimonialsSwiper = () => {
                 </div>
               </div>
               <p style={{ textAlign: "center" }}>
-                "{" "}{testimonial.College} {testimonial.Year}, {testimonial.Location}{" "}"
+                " {testimonial.College} {testimonial.Year},{" "}
+                {testimonial.Location} "
               </p>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div
-        className="swiper-button-nex"
-        id={styles.rev1}
-        style={navButtonStyles2}
-      >
-        {/* <Image src={arrow} /> */}
-        {">"}
-      </div>
     </div>
   );
-};
-
-const navButtonStyles1 = {
-  backgroundColor: "transparent",
-  color: "#25315D",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: '6rem',
-  fontWeight: '100',
-  cursor: 'pointer',
-};
-
-const navButtonStyles2 = {
-  backgroundColor: "transparent",
-  color: "#25315D",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: '6rem',
-  fontWeight: '100',
-  cursor: 'pointer',
 };
 
 export default TestimonialsSwiper;

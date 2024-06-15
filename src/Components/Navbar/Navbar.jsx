@@ -133,6 +133,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/countries">USA</Link>
+                </li>
+                <li>
                   <Link href="/ourevents">Events</Link>
                 </li>
                 <li>

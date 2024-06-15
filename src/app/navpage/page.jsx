@@ -39,6 +39,11 @@ const NavPage = () => {
           <ul>
             <li>
               <p>
+                <Link href="/aboutus">About Us</Link>
+              </p>
+            </li>
+            <li>
+              <p>
                 <Link
                   href={`/blogs/gmat/${
                     gm[0] && Object.keys(gm[0]).length === 0
@@ -53,6 +58,16 @@ const NavPage = () => {
             <li>
               <p>
                 <Link href="/success">Success Stories</Link>
+              </p>
+            </li>
+            <li>
+              <p>
+                <Link href="/ourevents">Events</Link>
+              </p>
+            </li>
+            <li>
+              <p>
+                <Link href="/countries">USA</Link>
               </p>
             </li>
           </ul>

@@ -158,7 +158,7 @@ const EventHome = () => {
           <div className="swiper-button-ne">{">"}</div>
         </div>
       </div>
-      <h2>Admissions</h2>
+      {/* <h2>Admissions</h2>
       <div className={styles.banner}>
         <h2
           onClick={() => setClicked("a")}
@@ -212,7 +212,7 @@ const EventHome = () => {
             </h2>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
