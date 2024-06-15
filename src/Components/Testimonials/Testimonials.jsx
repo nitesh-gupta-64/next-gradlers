@@ -65,7 +65,7 @@ const TestimonialsSwiper = () => {
         @media screen and (max-width: 900px) {
             .swiper {
                 width: 280px;
-                height: 180px;
+                height: 220px;
             }
             .swiper-slide > div {
                 width: 280px;
