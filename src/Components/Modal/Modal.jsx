@@ -16,7 +16,7 @@ const Modal = ({ onClose }) => {
               Please tell a bit about you so that we can help you better
             </p>
           </div>
-          <div onClick={onClose}>X</div>
+          <div onClick={onClose} style={{cursor: 'pointer'}}>X</div>
         </div>
         <div className={styles.img}>
           <Image src={c} alt="hg" />
