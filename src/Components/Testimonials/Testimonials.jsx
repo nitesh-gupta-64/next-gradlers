@@ -22,24 +22,26 @@ const TestimonialsSwiper = () => {
     <div className={styles.testi}>
       <style>{`
         .swiper, .swiper-slide > div {
-            width: 792px;
-            height: 376px;
+            width: 650px;
+            height: 340px;
         }
 
         .swiper-slide > div {
             padding: 4rem 2rem;
             gap: 2rem;
+            
         }
 
         .swiper-slide > div > div > img {
             border-radius: 100%;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
         }
         .swiper-slide > div > div {
           display: flex;
           justify-content: start;
+          align-items: center;
           gap: 3rem;
         }
         .swiper-slide > div > div > div > h3 {
@@ -65,8 +67,8 @@ const TestimonialsSwiper = () => {
                 margin-bottom: 0.1rem;
             }
             .swiper-slide > div > div > img {
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
             }
         }
       `}</style>
@@ -75,7 +77,8 @@ const TestimonialsSwiper = () => {
         id={styles.rev}
         style={navButtonStyles1}
       >
-        <Image src={arrow} />
+        {/* <Image src={arrow} /> */}
+        {"<"}
       </div>
       <Swiper
         className={styles.swi}
@@ -100,7 +103,7 @@ const TestimonialsSwiper = () => {
                 flexDirection: "column",
                 border: "1px solid #ccc",
                 borderRadius: "10px",
-                backgroundColor: "#fff",
+                backgroundColor: "#0a549506",
               }}
             >
               <div>
@@ -111,7 +114,7 @@ const TestimonialsSwiper = () => {
                 </div>
               </div>
               <p style={{ textAlign: "center" }}>
-                {testimonial.College} {testimonial.Year}, {testimonial.Location}
+                "{" "}{testimonial.College} {testimonial.Year}, {testimonial.Location}{" "}"
               </p>
             </div>
           </SwiperSlide>
@@ -122,32 +125,33 @@ const TestimonialsSwiper = () => {
         id={styles.rev1}
         style={navButtonStyles2}
       >
-        <Image src={arrow} />
+        {/* <Image src={arrow} /> */}
+        {">"}
       </div>
     </div>
   );
 };
 
 const navButtonStyles1 = {
-  backgroundColor: "#25315D",
-  color: "#FFFFFF",
-  padding: "1.2rem 0.5rem",
-  borderTopLeftRadius: "1.5rem",
-  borderEndStartRadius: "1.5rem",
+  backgroundColor: "transparent",
+  color: "#25315D",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  fontSize: '6rem',
+  fontWeight: '100',
+  cursor: 'pointer',
 };
 
 const navButtonStyles2 = {
-  backgroundColor: "#25315D",
-  color: "#FFFFFF",
-  padding: "1.2rem 0.5rem",
-  borderTopRightRadius: "1.5rem",
-  borderEndEndRadius: "1.5rem",
+  backgroundColor: "transparent",
+  color: "#25315D",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  fontSize: '6rem',
+  fontWeight: '100',
+  cursor: 'pointer',
 };
 
 export default TestimonialsSwiper;

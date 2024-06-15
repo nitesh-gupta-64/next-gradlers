@@ -63,21 +63,21 @@ function AppContextProvider({ children }) {
       console.log(sortedBlogs);
 
       const data5 = sortedBlogs.filter((blog) => blog.category === "GMAT");
-      setGm(data5[0]);
+      setGm(data5);
       const data1 = sortedBlogs.filter((blog) => blog.category === "GRE");
-      setGr(data1[0]);
+      setGr(data1);
       const data2 = sortedBlogs.filter(
         (blog) => blog.category === "Masters" || blog.category === "PhD"
       );
-      setMa(data2[0]);
+      setMa(data2);
       const data3 = sortedBlogs.filter(
         (blog) => blog.category === "Undergraduate"
       );
-      setUg(data3[0]);
+      setUg(data3);
       const data4 = sortedBlogs.filter(
         (blog) => blog.category === "IELTS" || blog.category === "TOEFL"
       );
-      setIe(data4[0]);
+      setIe(data4);
     } catch (error) {
       console.error("Error fetching Blogs:", error);
     }

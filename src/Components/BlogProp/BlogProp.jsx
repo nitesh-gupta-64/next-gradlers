@@ -21,41 +21,102 @@ const BlogProp = () => {
     if (categoryId === "gmat") {
       setClicked("gm");
       const data = sorted.filter((blog) => blog.category === "GMAT");
-      setShow(data[0]);
-      setShow1(data[1]);
-      setShow2(data[2]);
+      if (data[0] && blogId === data[0].slug) {
+        setShow(data[0]);
+        setShow1(data[1]);
+        setShow2(data[2]);
+      }
+      if (data[1] && blogId === data[1].slug) {
+        setShow(data[1]);
+        setShow1(data[0]);
+        setShow2(data[2]);
+      }
+      if (data[2] && blogId === data[2].slug) {
+        setShow(data[2]);
+        setShow1(data[0]);
+        setShow2(data[1]);
+      }
     }
     if (categoryId === "gre") {
       setClicked("gr");
       const data = sorted.filter((blog) => blog.category === "GRE");
-      setShow(data[0]);
-      setShow1(data[1]);
-      setShow2(data[2]);
+
+      if (data[0] && blogId === data[0].slug) {
+        setShow(data[0]);
+        setShow1(data[1]);
+        setShow2(data[2]);
+      }
+      if (data[1] && blogId === data[1].slug) {
+        setShow(data[1]);
+        setShow1(data[0]);
+        setShow2(data[2]);
+      }
+      if (data[2] && blogId === data[2].slug) {
+        setShow(data[2]);
+        setShow1(data[0]);
+        setShow2(data[1]);
+      }
     }
     if (categoryId === "masters") {
       setClicked("mp");
       const data = sorted.filter(
         (blog) => blog.category === "Masters" || blog.category === "PhD"
       );
-      setShow(data[0]);
-      setShow1(data[1]);
-      setShow2(data[2]);
+      if (data[0] && blogId === data[0].slug) {
+        setShow(data[0]);
+        setShow1(data[1]);
+        setShow2(data[2]);
+      }
+      if (data[1] && blogId === data[1].slug) {
+        setShow(data[1]);
+        setShow1(data[0]);
+        setShow2(data[2]);
+      }
+      if (data[2] && blogId === data[2].slug) {
+        setShow(data[2]);
+        setShow1(data[0]);
+        setShow2(data[1]);
+      }
     }
     if (categoryId === "undergraduate") {
       setClicked("ug");
       const data = sorted.filter((blog) => blog.category === "Undergraduate");
-      setShow(data[0]);
-      setShow1(data[1]);
-      setShow2(data[2]);
+      if (data[0] && blogId === data[0].slug) {
+        setShow(data[0]);
+        setShow1(data[1]);
+        setShow2(data[2]);
+      }
+      if (data[1] && blogId === data[1].slug) {
+        setShow(data[1]);
+        setShow1(data[0]);
+        setShow2(data[2]);
+      }
+      if (data[2] && blogId === data[2].slug) {
+        setShow(data[2]);
+        setShow1(data[0]);
+        setShow2(data[1]);
+      }
     }
     if (categoryId === "ielts") {
       setClicked("it");
       const data = sorted.filter(
         (blog) => blog.category === "IELTS" || blog.category === "TOEFL"
       );
-      setShow(data[0]);
-      setShow1(data[1]);
-      setShow2(data[2]);
+      if (data[0] && blogId === data[0].slug) {
+        setShow(data[0]);
+        setShow1(data[1]);
+        setShow2(data[2]);
+      }
+      if (data[1] && blogId === data[1].slug) {
+        setShow(data[1]);
+        setShow1(data[0]);
+        setShow2(data[2]);
+      }
+      if (data[2] && blogId === data[2].slug) {
+        setShow(data[2]);
+        setShow1(data[0]);
+        setShow2(data[1]);
+      }
     }
   }, [sorted]);
 
@@ -64,7 +125,13 @@ const BlogProp = () => {
       <div>
         <p
           onClick={() => {
-            router.push(`/blogs/gmat/${gm && Object.keys(gm).length === 0 ? 'noblog' : gm?.slug || 'noblog'}`);
+            router.push(
+              `/blogs/gmat/${
+                gm[0] && Object.keys(gm[0]).length === 0
+                  ? "noblog"
+                  : gm[0]?.slug || "noblog"
+              }`
+            );
           }}
           id={clicked === "gm" && styles.clicked}
         >
@@ -72,7 +139,13 @@ const BlogProp = () => {
         </p>
         <p
           onClick={() => {
-            router.push(`/blogs/gre/${gr && Object.keys(gr).length === 0 ? 'noblog' : gr?.slug || 'noblog'}`);
+            router.push(
+              `/blogs/gre/${
+                gr[0] && Object.keys(gr[0]).length === 0
+                  ? "noblog"
+                  : gr[0]?.slug || "noblog"
+              }`
+            );
           }}
           id={clicked === "gr" && styles.clicked}
         >
@@ -80,7 +153,13 @@ const BlogProp = () => {
         </p>
         <p
           onClick={() => {
-            router.push(`/blogs/masters/${ma && Object.keys(ma).length === 0 ? 'noblog' : ma?.slug || 'noblog'}`);
+            router.push(
+              `/blogs/masters/${
+                ma[0] && Object.keys(ma[0]).length === 0
+                  ? "noblog"
+                  : ma[0]?.slug || "noblog"
+              }`
+            );
           }}
           id={clicked === "mp" && styles.clicked}
         >
@@ -88,7 +167,13 @@ const BlogProp = () => {
         </p>
         <p
           onClick={() => {
-            router.push(`/blogs/undergraduate/${ug && Object.keys(ug).length === 0 ? 'noblog' : ug?.slug || 'noblog'}`);
+            router.push(
+              `/blogs/undergraduate/${
+                ug[0] && Object.keys(ug[0]).length === 0
+                  ? "noblog"
+                  : ug[0]?.slug || "noblog"
+              }`
+            );
           }}
           id={clicked === "ug" && styles.clicked}
         >
@@ -96,7 +181,13 @@ const BlogProp = () => {
         </p>
         <p
           onClick={() => {
-            router.push(`/blogs/ielts/${ie && Object.keys(ie).length === 0 ? 'noblog' : ie?.slug || 'noblog'}`);
+            router.push(
+              `/blogs/ielts/${
+                ie[0] && Object.keys(ie[0]).length === 0
+                  ? "noblog"
+                  : ie[0]?.slug || "noblog"
+              }`
+            );
           }}
           id={clicked === "it" && styles.clicked}
         >

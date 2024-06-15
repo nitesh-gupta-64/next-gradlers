@@ -41,9 +41,9 @@ const NavPage = () => {
               <p>
                 <Link
                   href={`/blogs/gmat/${
-                    gm && Object.keys(gm).length === 0
+                    gm[0] && Object.keys(gm[0]).length === 0
                       ? "noblog"
-                      : gm?.slug || "noblog"
+                      : gm[0]?.slug || "noblog"
                   }`}
                 >
                   Blogs
