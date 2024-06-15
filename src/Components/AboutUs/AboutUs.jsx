@@ -51,36 +51,6 @@ const AboutUs = () => {
           <Banner />
           <Banner />
           <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
         </div>
       </marquee>
     </>
