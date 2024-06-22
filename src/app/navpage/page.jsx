@@ -67,7 +67,12 @@ const NavPage = () => {
             </li>
             <li>
               <p>
-                <Link href="/countries">USA</Link>
+                <Link href="/usa">USA</Link>
+              </p>
+            </li>
+            <li>
+              <p>
+                <Link href="/countries">Country</Link>
               </p>
             </li>
           </ul>
