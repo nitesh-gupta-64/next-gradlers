@@ -82,7 +82,7 @@ const Events = () => {
           <main>
             <p style={{ color: "white" }}>Seminar on</p>
             <div style={{ display: "flex", alignItems: "end", gap: "0.6rem", paddingLeft: '1rem' }}>
-              <h1 style={{ fontSize: "80px", lineHeight:'70px' }}>{show.Category}</h1>
+              <h1 style={{ fontSize: "80px", lineHeight:'70px' }}>{show?.Category}</h1>
               <p style={{ paddingBottom: "0.9rem", color: "white" }}>in</p>
             </div>
             <h1>INDIA & ABROAD</h1>
@@ -97,14 +97,14 @@ const Events = () => {
                   })}{" "}
                 {show.Date && new Date(show.Date.toDate()).getFullYear()}
               </h4>
-              <h4>IST {show.Time} - {increaseTimeByOneHour(show.Time)}</h4>
+              <h4>IST {show?.Time} - {increaseTimeByOneHour(show?.Time)}</h4>
             </div>
-            <h4>Venue: {show.Location}</h4>
+            <h4>Venue: {show?.Location}</h4>
           </div>
         </div>
         <div>
-          <h6>{show.Description}</h6>
-          <img height={120} width={230} src={show.Image} alt="" />
+          <h6>{show?.Description}</h6>
+          <img height={120} width={230} src={show?.Image} alt="" />
         </div>
         <div>
           {clicked === "up" && upcoming.length > 0 ? (
