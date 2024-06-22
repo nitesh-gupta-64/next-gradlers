@@ -22,7 +22,7 @@ const NavPage = () => {
             </li>
             <li>
               <p>
-                <Link href="/counselling">IELTS</Link>
+                <Link href="/ielts">IELTS</Link>
               </p>
             </li>
             <li>

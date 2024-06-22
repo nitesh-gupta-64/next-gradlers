@@ -184,7 +184,7 @@ const Navbar = () => {
                   <Link href="/gmat">GMAT</Link>
                 </li>
                 <li>
-                  <Link href="/counselling">IELTS</Link>
+                  <Link href="/ielts">IELTS</Link>
                 </li>
                 <li>
                   <Link href="/counselling">TOEFL</Link>
