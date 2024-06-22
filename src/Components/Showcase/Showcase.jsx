@@ -7,6 +7,7 @@ import eve from "../../../public/assets/images/calender.png";
 import suc from "../../../public/assets/images/ss.png";
 import clock from "../../../public/assets/images/clock.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Showcase = () => {
   const { blogs, events, admitInfo } = useContext(AppContext);
@@ -15,6 +16,7 @@ const Showcase = () => {
   const [clicked, setClicked] = useState("blogs");
   const [click, setClick] = useState("gmat");
   const [showP, setShowP] = useState([]);
+  const router = useRouter()
 
   useEffect(() => {
     if (admitInfo && admitInfo.length > 0) {
@@ -162,7 +164,7 @@ const Showcase = () => {
       <div>
         {clicked === "blogs" &&
           showP.map((eve) => (
-            <div>
+            <div onClick={() => router.push(`/blogs/${eve.category.toLowerCase()}/${eve.slug}`)} style={{cursor: 'pointer'}}>
               <img width={320} height={240} src={eve.image} alt="img" />
               <i>
                 {" "}

@@ -19,15 +19,17 @@ const Contact = () => {
       <div className={styles.con}>
         <div>
           <h2>Contact us</h2>
-          <p>Fill our contact form and we will reach out within 24 hours</p>
+          <p>
+            Fill our contact form and we will reach out <br /> within 24 hours
+          </p>
           <Image src={con} />
         </div>
-        <Form />
-      </div>
-      <div className={styles.con1}>
         <div>
           <Image src={c1} />
         </div>
+      </div>
+      <div className={styles.con1}>
+        <Form />
         <div>
           <Map latitude={latitude} longitude={longitude} />
         </div>

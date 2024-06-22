@@ -113,7 +113,7 @@ const NavPage = () => {
           </h3>
         </li>
       </ul>
-      <div onClick={() => router.back()}>
+      <div className={styles.abs} onClick={() => router.back()}>
         <CloseIcon />
       </div>
     </div>

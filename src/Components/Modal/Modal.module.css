@@ -1,23 +1,33 @@
 /* src/Modal.css */
 .modalBackdrop {
   position: fixed;
-  top: 9%;
-  left: 15%;
-  width: 70vw;
-  height: 82vh;
-  background-color: #fffbed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
 
 .modalContent {
   background-color: #fffbed;
+  border-radius: 1rem;
   border-radius: 5px;
+  width: 70vw;
+  height: 82vh;
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
+}
+
+.abs {
+  position: absolute;
+  top: 10%;
+  right: 16%;
 }
 
 .head {
@@ -36,10 +46,11 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .modalBackdrop {
-    left: 5%;
+  .modalContent {
     width: 90vw;
-    top: 2%;
+  }
+  .abs {
+    right: 6.5%;
   }
   .img {
     flex-direction: column;

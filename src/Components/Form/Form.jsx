@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Form.module.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-number-input";
 import { db } from "@/firebase/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "react-toastify/dist/ReactToastify.css";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -22,6 +22,27 @@ const Form = () => {
   const [cc, setCc] = useState(false);
   const [ii, setIi] = useState(false);
   const [clicked, setClicked] = useState(false);
+
+
+  const modalRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setClicked(false);
+    }
+  };
+
+  useEffect(() => {
+    if (clicked) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [clicked]);
 
   useEffect(() => {
     setInterest({});
@@ -113,30 +134,29 @@ const Form = () => {
       <div>
         <label>Interested in?</label>
         <a className={styles.choose} onClick={() => setClicked(!clicked)}>
-         {tp ? (<p>Test Prep</p>): ''}
-         {fa ? (<p>Foreign Admissions</p>) : ''}
-         {vg ? (<p>Visa Guidance</p>) : ''}
-         {cc ? (<p>Career Counselling</p>) : ''}
-         {ii ? (<p>International Internships</p>) : ''}
-         {!tp && !fa && !vg && !cc && !ii && 'Choose...'}
-
+          {tp ? <p>Test Prep</p> : ""}
+          {fa ? <p>Foreign Admissions</p> : ""}
+          {vg ? <p>Visa Guidance</p> : ""}
+          {cc ? <p>Career Counselling</p> : ""}
+          {ii ? <p>International Internships</p> : ""}
+          {!tp && !fa && !vg && !cc && !ii && "Choose..."}
         </a>
         <div>
           {clicked && (
-            <ul>
-              <li onClick={() => setTp(!tp)} id={tp && styles.click}>
+            <ul ref={modalRef}>
+              <li onClick={() => setTp(!tp)} id={tp ? styles.click : ""}>
                 Test Prep
               </li>
-              <li onClick={() => setFa(!fa)} id={fa && styles.click}>
+              <li onClick={() => setFa(!fa)} id={fa ? styles.click : ""}>
                 Foreign Admissions
               </li>
-              <li onClick={() => setVg(!vg)} id={vg && styles.click}>
+              <li onClick={() => setVg(!vg)} id={vg ? styles.click : ""}>
                 Visa Guidance
               </li>
-              <li onClick={() => setCc(!cc)} id={cc && styles.click}>
+              <li onClick={() => setCc(!cc)} id={cc ? styles.click : ""}>
                 Career Counselling
               </li>
-              <li onClick={() => setIi(!ii)} id={ii && styles.click}>
+              <li onClick={() => setIi(!ii)} id={ii ? styles.click : ""}>
                 International Internships
               </li>
             </ul>

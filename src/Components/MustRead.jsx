@@ -17,8 +17,7 @@ const MustRead = ({ mb, show, show1, show2, setShow, setShow1, setShow2 }) => {
                 <div
                   onClick={() => {
                     router.push(
-                      `${show1.slug}
-                      `
+                      `${show1.slug}                    `
                     );
                   }}
                 >

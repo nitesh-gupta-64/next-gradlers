@@ -19,8 +19,8 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <marquee behavior="" direction="">
-        <div className={styles.ban}>
+      <div className={styles.marqueecontainer}>
+        <div className={styles.marqueecontent}>
           <Banner />
           <Banner />
           <Banner />
@@ -52,7 +52,7 @@ const AboutUs = () => {
           <Banner />
           <Banner />
         </div>
-      </marquee>
+      </div>
     </>
   );
 };

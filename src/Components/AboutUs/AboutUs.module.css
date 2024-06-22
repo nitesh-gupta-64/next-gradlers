@@ -19,8 +19,27 @@
   align-items: center;
 }
 
-.ban {
+.marqueecontainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marqueecontent {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 50s linear infinite;
   display: flex;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
 }
 
 @media screen and (max-width: 1200px) {
