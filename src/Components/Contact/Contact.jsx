@@ -11,8 +11,8 @@ import dynamic from "next/dynamic";
 const Map = dynamic(() => import("../Map"), { ssr: false });
 
 const Contact = () => {
-  const latitude = 40.7128;
-  const longitude = -74.006;
+  const latitude = 17.417990;
+  const longitude = 78.459050;
 
   return (
     <div className={styles.c}>

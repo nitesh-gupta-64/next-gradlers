@@ -1,4 +1,3 @@
-
 import styles from "./page.module.css";
 import Hero from "@/Components/Hero/Hero";
 import AboutUs from "@/Components/AboutUs/AboutUs";

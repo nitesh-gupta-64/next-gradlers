@@ -86,7 +86,7 @@ const US = () => {
           <li>Social Sciences</li>
         </ul>
       </div>
-      <button>Speek to Expert</button>
+      <button>Speak to Expert</button>
       <div className={styles.c5}>
         <div className={styles.c4}>
           <h3>Top Admits 2023- UG & PG</h3>

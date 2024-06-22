@@ -10,6 +10,8 @@ export const AppContext = createContext();
 function AppContextProvider({ children }) {
   const [events, setEvents] = useState([]);
   const [admitInfo, setAdmitInfo] = useState([]);
+  const [visaInfo, setVisaInfo] = useState([]);
+  const [testPrepInfo, setTestPrepInfo] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [gm, setGm] = useState({});
   const [gr, setGr] = useState({});
@@ -41,6 +43,34 @@ function AppContextProvider({ children }) {
         ...doc.data(),
       }));
       setAdmitInfo(data);
+    } catch (error) {
+      console.error("Error fetching Admits:", error);
+    }
+  };
+
+  const fetchTestPrepInfo = async () => {
+    try {
+      const ref = collection(db, "testPrepInfo");
+      const snapshot = await getDocs(ref);
+      const data = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setTestPrepInfo(data);
+    } catch (error) {
+      console.error("Error fetching Admits:", error);
+    }
+  };
+
+  const fetchVisaInfo = async () => {
+    try {
+      const ref = collection(db, "visaInfo");
+      const snapshot = await getDocs(ref);
+      const data = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setVisaInfo(data);
     } catch (error) {
       console.error("Error fetching Admits:", error);
     }
@@ -88,12 +118,16 @@ function AppContextProvider({ children }) {
     fetchEvents();
     fetchAdmitInfo();
     fetchBlogs();
+    fetchTestPrepInfo();
+    fetchVisaInfo();
   }, []);
   const mb = useMediaQuery("(min-width:800px)");
 
   const value = {
     events,
     admitInfo,
+    visaInfo,
+    testPrepInfo,
     blogs,
     mb,
     gm,

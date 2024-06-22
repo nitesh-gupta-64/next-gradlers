@@ -100,8 +100,8 @@
 
     .header div:nth-child(1) {
         height: 6rem;
+        padding: 0.2rem 0.4rem;
     }
-
     .header > div:nth-child(1) > div:nth-child(1) {
         width: 100%;
     }

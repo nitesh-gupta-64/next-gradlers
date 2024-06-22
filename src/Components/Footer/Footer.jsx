@@ -17,12 +17,12 @@ const Footer = () => {
       <div>
         <p>Want to get into a college in Abroad?</p>
         <p>
-          <Link href='/contactus'>Talk to an expert today</Link>
+          <Link href="/contactus">Talk to an expert today</Link>
         </p>
       </div>
       <div>
         <div>
-          <Image style={{height: 'auto', width: '10rem'}} src={logo} />
+          <Image style={{ height: "auto", width: "10rem" }} src={logo} />
           <p>
             Gradlers aims to help applicants make informed choices about global
             education opportunities while providing holistic guidance to
@@ -38,7 +38,9 @@ const Footer = () => {
         <div>
           <span>Help</span>
           <ul>
-            <li><Link href='/#aboutus'>About us</Link></li>
+            <li>
+              <Link href="/#aboutus">About us</Link>
+            </li>
             <li>Branch List</li>
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
@@ -56,18 +58,18 @@ const Footer = () => {
           <ul>
             <li>
               <Image src={call} />
-              <p>+91-93 552 552 23</p>
+              <p>040-45066171</p>
             </li>
             <li>
               <Image src={addr} />
               <p>
-                REG. OFFICE : 704,7TH FLOOR PALM COURT, MEHRAULI-GURGAON ROAD
-                SECTOR 16, GURUGRAM, HARYANA (122007)
+                5th Floor, 502, Vista Grand Tower, Raj Bhavan Rd, Raj Bhavan
+                Quarters Colony, Somajiguda, Hyderabad, Telangana 500082
               </p>
             </li>
             <li>
               <Image src={mail} />
-              <p>admin@Gradlers.com</p>
+              <p>info@gradlers.com</p>
             </li>
           </ul>
         </div>

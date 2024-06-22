@@ -30,8 +30,7 @@ const MBA = () => {
               delay: 3000,
               disableOnInteraction: false,
             }}
-            pagination={{ clickable: true }}
-            modules={[Pagination, Autoplay]}
+            modules={[Autoplay]}
             className={styles.mySwiper}
           >
             <SwiperSlide>

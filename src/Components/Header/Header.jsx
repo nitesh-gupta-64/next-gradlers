@@ -32,7 +32,7 @@ const Header = () => {
         <div>
           <div>
             <Link href="/">
-              <Image height={64} src={logo} />
+              <Image height={60} src={logo} />
             </Link>
             <Link href="/navpage">
               <Image height={32} className={styles.ham} src={ham} />

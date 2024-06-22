@@ -11,6 +11,7 @@
 .about p {
   font-size: 20px;
   text-align: justify;
+  line-height: 30px;
 }
 
 .about > div > div {

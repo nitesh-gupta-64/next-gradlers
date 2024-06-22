@@ -1,4 +1,3 @@
-"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import SwiperCore from "swiper";
@@ -9,43 +8,51 @@ import styles from "./Testimonials.module.css";
 import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import arrow from "../../../public/assets/images/arrow.png";
-import { useContext } from "react";
-import { AppContext } from "@/Context/AppContext";
+import ql from "../../../public/assets/images/q1.png";
+import qr from "../../../public/assets/images/q2.png";
 
 // Install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
 
-const TestimonialsSwiper = () => {
-  const { admitInfo } = useContext(AppContext);
+const TestimonialsSwiper = ({data}) => {
 
   return (
     <div className={styles.testi}>
       <style>{`
         .swiper {
             width: 650px;
-            height: 400px;
+            height: 320px;
         }
         .swiper-slide > div {
             width: 650px;
-            height: 340px;
+            height: 320px;
         }
 
         .swiper-slide > div {
-            padding: 4rem 2rem;
-            gap: 2rem;
-            
+            padding: 3rem 2rem;
+            padding-top: 5rem;
+            gap: 2rem;  
         }
-
+        .swiper-slide main {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 3rem;
+        }
+        .swiper-slide main img {
+          width: 4rem;
+          height: auto;
+        }
         .swiper-slide > div > div > img {
             border-radius: 100%;
-            width: 120px;
-            height: 120px;
+            width: 90px;
+            height: 90px;
             object-fit: cover;
         }
         .swiper-slide > div > div {
           display: flex;
           justify-content: start;
-          align-items: center;
+          align-items: start;
           gap: 3rem;
         }
         .swiper-slide > div > div > div > h3 {
@@ -73,16 +80,19 @@ const TestimonialsSwiper = () => {
                 padding: 1rem 1rem;
                 gap: 1rem;
             }
-            .swiper-slide > div > div {
-              gap: 1rem;
+            .swiper-slide p {
+              font-size: 0.6rem;
             }
-            .swiper-slide > div > div > div > h3 {
-                margin-top: 0.3rem;
-                margin-bottom: 0.1rem;
+             .swiper-slide main {     
+                gap: 0.5rem;
             }
-            .swiper-slide > div > div > img {
-                width: 60px;
-                height: 60px;
+            .swiper-slide > div > div > img {    
+              width: 50px;
+              height: 50px;      
+            }
+            .swiper-slide h3 {
+              font-size: 1rem;
+              line-height: 5px;
             }
         }
       `}</style>
@@ -104,18 +114,23 @@ const TestimonialsSwiper = () => {
         slidesPerView={1}
         loop={true}
       >
-        {admitInfo.map((testimonial, index) => (
+        {data && data.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <div
               style={{
                 display: "flex",
-                alignItems: "center",
+                alignItems: "end",
                 flexDirection: "column",
                 border: "1px solid #ccc",
                 borderRadius: "10px",
                 backgroundColor: "#0a549506",
               }}
             >
+              <main>
+                <Image src={ql} alt="q" />
+                <p>{testimonial.Description}</p>
+                <Image src={qr} alt="q" />
+              </main>
               <div>
                 <img src={testimonial.Image} alt={testimonial.Name} />
                 <div>
@@ -123,10 +138,6 @@ const TestimonialsSwiper = () => {
                   <p style={{ color: "#FFC107" }}>{testimonial.Program}</p>
                 </div>
               </div>
-              <p style={{ textAlign: "center" }}>
-                " {testimonial.College} {testimonial.Year},{" "}
-                {testimonial.Location} "
-              </p>
             </div>
           </SwiperSlide>
         ))}

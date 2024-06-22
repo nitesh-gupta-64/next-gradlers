@@ -73,6 +73,7 @@
 .blog > div:nth-child(2) > div:nth-child(1) > p {
   font-size: 18px;
   width: 95%;
+  line-height: 30px;
 }
 
 .blog > div:nth-child(2) > div:nth-child(2) {
