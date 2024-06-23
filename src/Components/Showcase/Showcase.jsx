@@ -16,7 +16,7 @@ const Showcase = () => {
   const [clicked, setClicked] = useState("blogs");
   const [click, setClick] = useState("gmat");
   const [showP, setShowP] = useState([]);
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     if (admitInfo && admitInfo.length > 0) {
@@ -164,7 +164,12 @@ const Showcase = () => {
       <div>
         {clicked === "blogs" &&
           showP.map((eve) => (
-            <div onClick={() => router.push(`/blogs/${eve.category.toLowerCase()}/${eve.slug}`)} style={{cursor: 'pointer'}}>
+            <div
+              onClick={() =>
+                router.push(`/blogs/${eve.category.toLowerCase()}/${eve.slug}`)
+              }
+              style={{ cursor: "pointer" }}
+            >
               <img width={320} height={240} src={eve.image} alt="img" />
               <i>
                 {" "}

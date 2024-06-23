@@ -17,9 +17,9 @@ const Header = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true);
-    }, 90000); // 120000 ms = 2 minutes
+    }, 90000);
 
-    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   const closeModal = () => {

@@ -13,7 +13,7 @@ const AboutUs = () => {
         <div>
           <div>
             <p>
-              {data.aboutUs} {data.aboutUs}
+              {data.aboutUs}
             </p>
             <Image width={700} src={about} />
           </div>

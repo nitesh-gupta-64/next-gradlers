@@ -12,7 +12,7 @@ import ql from "../../../public/assets/images/q1.png";
 import qr from "../../../public/assets/images/q2.png";
 
 // Install Swiper modules
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation]);
 
 const TestimonialsSwiper = ({data}) => {
 
@@ -102,11 +102,6 @@ const TestimonialsSwiper = ({data}) => {
           borderRadius: "10px",
         }}
         grabCursor={true}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-          dynamicMainBullets: 3,
-        }}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,

@@ -99,7 +99,7 @@ const EventHome = () => {
                   style={{
                     objectFit: "cover",
                     width: "300px",
-                    height: "246px",
+                    height: "230px",
                   }}
                 />
                 <div

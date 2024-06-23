@@ -18,13 +18,16 @@ const About = () => {
         <div>
           <h2>About Us</h2>
           <p>
-            We at Gradlers are driven by the mission to redefine the structure
-            for global education for Indian students.
+            Gradlers is a student first overseas education specialist, where
+            your global education dreams are shaped and fulfilled seamlessly.
           </p>
           <p>
-            Gradlers was founded in 2019 with the sole purpose of helping out
-            Indian students in pursuing their study abroad dream by making the
-            process simpler, effective, and less time-consuming.
+            We are Empowering students with expert mentoring, personalized
+            support and comprehensive services tailored to the unique needs of
+            every student. <br /> Our Vision is, To be the trusted leaders in
+            global education domain by connecting and supporting students,
+            institutions, and communities to create transformative international
+            education experiences.
           </p>
         </div>
       </div>
@@ -50,19 +53,38 @@ const About = () => {
         <div>
           <h2>Why Gradlers?</h2>
           <p>
-            Our founders have studied and worked in the US and UK, bringing
-            along with them real-world experiences from across the globe. They
-            continuously work on building a talented team and evaluating quality
-            partners to expand our reach for students.
+            Gradlers enables students to achieve their academic dreams and
+            become impactful leaders by providing comprehensive mentoring,
+            in-depth test preparation and admissions counseling. We help you
+            unlock your potential to achieve the extraordinary.
           </p>
           <div>
-            <b>Few Facts about us</b>
-            <ul>
-              <li>Partnered with more than 800 top universities worldwide</li>
-              <li>Assisted more than 3000 students in the past 3 years</li>
-              <li>Personality Development and Self-Dependent Outlook</li>
-              <li>Have a 98% visa approval rate</li>
-            </ul>
+            <b>Our Values</b>
+            <ol>
+              <li>
+                Commitment to Excellence – Set high standards in everything we
+                do
+              </li>
+              <li>
+                Empowerment – Empowering all stakeholders students, institutions
+                and the team for growth and success
+              </li>
+              <li>
+                Passion: Our only passion is ‘student first and student success’
+              </li>
+              <li>
+                Bias for Action – Enabling Individuals to take initiatives and
+                make decision without prejudice
+              </li>
+              <li>
+                Collaboration – Promote open communication and sharing of ideas
+                to foster innovation and solve problems effectively.
+              </li>
+              <li>
+                Unlearn & Relearn – Encourage curiosity and the pursuit of
+                knowledge to stay ahead in the dynamic field of education
+              </li>
+            </ol>
           </div>
         </div>
         <Image src={ab3} />

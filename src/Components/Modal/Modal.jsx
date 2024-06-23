@@ -10,13 +10,18 @@ const Modal = ({ onClose }) => {
     <div className={styles.modalBackdrop}>
       <div className={styles.modalContent}>
         <div className={styles.head}>
-          <div>
-            <p style={{ fontSize: "20px" }}>Tell us about you</p>
-            <p style={{ fontSize: "12px", fontWeight: "300" }}>
-              Please tell a bit about you so that we can help you better
-            </p>
+          <p style={{ fontSize: "20px" }}>Tell us about you</p>
+          <p style={{ fontSize: "12px", fontWeight: "300" }}>
+            Please tell a bit about you so that we can help you better
+          </p>
+
+          <div
+            className={styles.abs}
+            onClick={onClose}
+            style={{ cursor: "pointer" }}
+          >
+            X
           </div>
-          <div className={styles.abs} onClick={onClose} style={{cursor: 'pointer'}}>X</div>
         </div>
         <div className={styles.img}>
           <Image src={c} alt="hg" />

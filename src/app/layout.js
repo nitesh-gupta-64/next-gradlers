@@ -15,10 +15,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body className={inter.className}>
+        <script type="text/javascript">
+          var npf_d='https://collegeconnect.in8.nopaperforms.com'; var
+          npf_c='6158'; var npf_m='1'; var s=document.createElement("script");
+          s.type="text/javascript"; s.async=true;
+          s.src="https://track.nopaperforms.com/js/track.js";
+          document.body.appendChild(s);
+        </script>
         <AppContextProvider>
           <AppRouterCacheProvider>
             <>

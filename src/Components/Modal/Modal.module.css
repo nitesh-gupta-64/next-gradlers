@@ -12,29 +12,29 @@
 
 .modalContent {
   background-color: #fffbed;
-  border-radius: 1rem;
-  border-radius: 5px;
+  border-radius: 0.4rem;
   width: 70vw;
   height: 82vh;
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
-  margin-top: 1.5rem;
-  padding: 2rem;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
   gap: 1rem;
 }
 
 .abs {
   position: absolute;
-  top: 5%;
+  top: 3.8%;
   right: 15.8%;
 }
 
 .head {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: start;
   align-items: start;
 }
 
@@ -49,6 +49,7 @@
 @media screen and (max-width: 1100px) {
   .modalContent {
     width: 90vw;
+    height: auto;
   }
   .abs {
     right: 6.5%;
@@ -58,8 +59,6 @@
     gap: 1rem;
   }
   .img > img {
-    height: 10rem;
-    width: auto;
     display: none;
   }
 }

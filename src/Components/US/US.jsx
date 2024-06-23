@@ -3,6 +3,8 @@ import styles from "./US.module.css";
 import us from "../../../public/assets/images/uss.png";
 import Image from "next/image";
 import AdmitContainer from "../AdmitContainer/AdmitContainer";
+import Script from "next/script";
+
 
 const US = () => {
   const data = [
@@ -51,14 +53,23 @@ const US = () => {
       </div>
       <button>Download Destination Guide</button>
       <div className={styles.c2}>
-        <p>All you need for your USA Dream</p>
-        <ul>
-          <li>Personalized Counselling</li>
-          <li>Test-Prep Coaching</li>
-          <li>University Selection & Admission</li>
-          <li>Visa Support</li>
-          <li>Pre-departure Orientation</li>
-        </ul>
+        <p>How do we make your Dream a Reality</p>
+        <ol>
+          <li>
+            Discover Your Edge: <br /> We help you identify what makes you truly
+            unique and sets you apart <br /> from other applicants.
+          </li>
+          <li>
+            Rise to the Challenge: <br /> We guide you through a personalized
+            journey of continuous improvement, <br /> pushing your boundaries
+            and maximizing your potential.
+          </li>
+          <li>
+            Navigate the Path to Success: <br /> With our insider knowledge of
+            international admissions, we equip you with <br /> the tools and
+            strategies to gain acceptance into the world's top universities.
+          </li>
+        </ol>
       </div>
       <button>Connect to Expert</button>
       <div className={styles.c3}>
@@ -93,6 +104,19 @@ const US = () => {
         </div>
         <AdmitContainer />
       </div>
+      <div
+        class="npf_wgts"
+        data-height="400px"
+        data-w="126126f4ca07e7566448375bd97faeee"
+      >    
+      </div>
+      <button
+        type="button"
+        class="npfWidgetButton npfWidget-126126f4ca07e7566448375bd97faeee"
+      >
+        Enquire Now!
+      </button>
+
       <div className={styles.c6}>
         <h3>Frequently Asked Questions (FAQs)</h3>
         <p>
@@ -203,6 +227,23 @@ const US = () => {
           complications later.
         </p>
       </div>
+      <Script src="https://widgets.in8.nopaperforms.com/emwgts.js" strategy="beforeInteractive" />
+      <Script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js" strategy="beforeInteractive" />
+
+      <Script id="popup-widget-init" strategy="lazyOnload">
+        {`
+          let npfW126126f4ca07e7566448375bd97faeee = new NpfWidgetsInit({
+              "widgetId":"126126f4ca07e7566448375bd97faeee",
+              "baseUrl":"widgets.in8.nopaperforms.com",
+              "formTitle":"Enquiry Form",
+              "titleColor":"#FF0033",
+              "backgroundColor":"#ddd",
+              "iframeHeight":"500px",
+              "buttonbgColor":"#4c79dc",
+              "buttonTextColor":"#FFF"
+          });
+        `}
+      </Script>
     </div>
   );
 };

@@ -6,18 +6,21 @@ import Achievements from "@/Components/Achievements/Achievements";
 import Countries from "@/Components/Countries/Countries";
 import Events from "@/Components/Events/Events";
 import Showcase from "@/Components/Showcase/Showcase";
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css";
+import HelpMba from "@/Components/HelpMba/HelpMba";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <AboutUs/>
-      <Journey/>
-      <Achievements/>
-      <Countries/>
-      <Events/>
-      <Showcase/>
+      <Hero />
+      <AboutUs />
+      <HelpMba />
+      <Journey />
+      <Achievements />
+      <Countries />
+      <Events />
+      <Showcase />   
     </>
   );
 }
