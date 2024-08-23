@@ -1,0 +1,54 @@
+.carouselContainer {
+  width: 100vw;
+  margin: auto;
+}
+
+.imgp {
+  width: 100vw;
+  max-height: 80vh;
+  position: relative;
+}
+
+.carouselContainer img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.abs {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.abs > div {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  max-width: 90vw;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  .abs > div {
+    max-width: 90vw;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .abs > div {
+    font-size: 1rem;
+  }
+  #read {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

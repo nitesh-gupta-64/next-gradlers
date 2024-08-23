@@ -38,25 +38,26 @@ const Banner = () => {
       <main>
         <img src={show.Image} alt="b" />
       </main>
-      <main>
+      <main className=" h-screen" style={{
+        marginTop: '1rem'
+      }}>
         <div
           style={{
             display: "flex",
             alignItems: "end",
             gap: "0.6rem",
-            paddingLeft: "1rem",
           }}
         >
           <h1
-            style={{ fontSize: "50px", lineHeight: "70px", color: "#FECB02" }}
+            style={{ fontSize: "2.5rem", lineHeight: "50px", color: "#4267b1" }}
           >
             {show.Category}
           </h1>
         </div>
         <h1
           style={{
-            color: "#FECB02",
-            fontSize: '30px'
+            color: "#4267b1",
+            fontSize: "1.5rem",
           }}
         >
           INDIA & ABROAD
@@ -76,8 +77,9 @@ const Banner = () => {
             IST {show.Time} - {increaseTimeByOneHour(show.Time)}
           </h4>
         </div>
-        <h4>Venue: {show.Location}</h4>
+        {/* <h4>Venue: {show.Location}</h4> */}
       </div>
+      <div className={styles.abs}>FREE ENTRY</div>
     </div>
   );
 };

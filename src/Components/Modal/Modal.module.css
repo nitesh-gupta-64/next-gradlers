@@ -17,7 +17,7 @@
   height: 82vh;
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   margin-top: 1rem;
   padding: 1rem 2rem;
@@ -42,8 +42,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 1rem;
   width: 100%;
+}
+
+.img > img {
+  width: 40vw;
 }
 
 @media screen and (max-width: 1100px) {

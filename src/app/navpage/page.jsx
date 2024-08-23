@@ -1,127 +1,225 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./navpage.module.css";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/navigation";
+import PartnerForm from "@/Components/PartnerForm/PartnerForm";
 import { AppContext } from "@/Context/AppContext";
 
 const NavPage = () => {
   const router = useRouter();
-  const { gm } = useContext(AppContext);
+  const { showForm, setShowForm } = useContext(AppContext);
   return (
-    <div className={styles.nav}>
-      <ul>
-        <li>
-          <h3>Test Prep</h3>
+    <>
+      <div className={styles.navCon}>
+        <div className={styles.nav}>
           <ul>
             <li>
-              <p>
-                <Link href="gmat">GMAT</Link>
-              </p>
+              <h3>Test Prep</h3>
+              <ul>
+                <li>
+                  <h4>English Proficiency Test</h4>
+                  <ul>
+                    <li>
+                      <p>
+                        <Link href="/ielts">IELTS</Link>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <Link href="/toefl">TOEFL</Link>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <Link href="/pte">PTE</Link>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <Link href="/duolingo">DUOLINGO</Link>
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Standardized Tests</h4>
+                  <ul>
+                    <li>
+                      <p>
+                        <Link href="/sat">SAT</Link>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <Link href="/gre">GRE</Link>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <Link href="/gmat">GMAT</Link>
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
-              <p>
-                <Link href="/ielts">IELTS</Link>
-              </p>
+              <h3>
+                <h3>Countries</h3>
+              </h3>
+              <ul>
+                <li>
+                  <p>
+                    <Link href="/usa">USA</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/canada">Canada</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/uk">UK</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/germany">Germany</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/ireland">Ireland</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/australia">Australia</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/new-zealand">New Zealand</Link>
+                  </p>
+                </li>
+              </ul>
             </li>
             <li>
-              <p>
-                <Link href="/counselling">TOEFL</Link>
-              </p>
+              <h3>Study</h3>
+              <ul>
+                <li>
+                  <p>
+                    <Link href="/ug">Undergrad</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/masters">Masters (MS)</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/mba">MBA</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/phd">Ph.D</Link>
+                  </p>
+                </li>
+              </ul>
             </li>
-          </ul>
-        </li>
-        <li>
-          <h3>
-            <Link href="/resources">Resources</Link>
-          </h3>
-          <ul>
             <li>
-              <p>
-                <Link href="/aboutus">About Us</Link>
-              </p>
+              <h3>
+                <h3>Visas</h3>
+              </h3>
+              <ul>
+                <li>
+                  <p>
+                    <Link href="/visa/usa">USA</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/visa/uk">UK</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/visa/germany">Germany</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/visa/canada">Canada</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/visa/australia">Australia</Link>
+                  </p>
+                </li>
+              </ul>
             </li>
             <li>
-              <p>
-                <Link
-                  href={`/blogs/gmat/${
-                    gm[0] && Object.keys(gm[0]).length === 0
-                      ? "noblog"
-                      : gm[0]?.slug || "noblog"
-                  }`}
+              <h3>
+                <Link href="/counselling">Career and Counselling</Link>
+              </h3>
+            </li>
+            <li>
+              <h3>
+                <Link href="/resources">Resources</Link>
+              </h3>
+              <ul>
+                <li>
+                  <p>
+                    <Link href="/about-us">About Us</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/ourevents">Events</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/success">Success Stories</Link>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <Link href="/locations">Our Locations</Link>
+              </h3>
+            </li>
+            <li>
+              <h3>
+                <a
+                  onClick={() => {
+                    setShowForm(true);
+                    router.back();
+                  }}
                 >
-                  Blogs
-                </Link>
-              </p>
+                  Partner with us
+                </a>
+              </h3>
             </li>
             <li>
-              <p>
-                <Link href="/success">Success Stories</Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link href="/ourevents">Events</Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link href="/usa">USA</Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link href="/countries">Country</Link>
-              </p>
+              <h3 style={{ marginBottom: "3rem" }}>
+                <Link href="/contact-us">Contact Us</Link>
+              </h3>
             </li>
           </ul>
-        </li>
-        <li>
-          <h3>Admissions</h3>
-          <ul>
-            <li>
-              <p>
-                <Link href="/mba">MBA</Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link href="/counselling">Masters (MS)</Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link href="/counselling">Undergrad</Link>
-              </p>
-            </li>
-            <li>
-              <p>
-                <Link href="/counselling">PHD</Link>
-              </p>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>
-            <Link href="/counselling">Career and Counselling</Link>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            <Link href="/locations">Our Locations</Link>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            <Link href="/contactus">Contact Us</Link>
-          </h3>
-        </li>
-      </ul>
-      <div className={styles.abs} onClick={() => router.back()}>
-        <CloseIcon />
+          <div className={styles.abs} onClick={() => router.back()}>
+            <CloseIcon />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

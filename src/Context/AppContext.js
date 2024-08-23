@@ -19,6 +19,9 @@ function AppContextProvider({ children }) {
   const [ug, setUg] = useState({});
   const [ie, setIe] = useState({});
   const [sorted, setSorted] = useState([]);
+  const [showForm, setShowForm] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const fetchEvents = async () => {
     try {
@@ -42,7 +45,7 @@ function AppContextProvider({ children }) {
         id: doc.id,
         ...doc.data(),
       }));
-      setAdmitInfo(data);
+      setAdmitInfo(data.reverse());
     } catch (error) {
       console.error("Error fetching Admits:", error);
     }
@@ -56,7 +59,7 @@ function AppContextProvider({ children }) {
         id: doc.id,
         ...doc.data(),
       }));
-      setTestPrepInfo(data);
+      setTestPrepInfo(data.reverse());
     } catch (error) {
       console.error("Error fetching Admits:", error);
     }
@@ -122,6 +125,7 @@ function AppContextProvider({ children }) {
     fetchVisaInfo();
   }, []);
   const mb = useMediaQuery("(min-width:800px)");
+  const tb = useMediaQuery("(min-width:1200px)");
 
   const value = {
     events,
@@ -137,6 +141,13 @@ function AppContextProvider({ children }) {
     ie,
     sorted,
     setSorted,
+    showForm,
+    setShowForm,
+    isOpen,
+    setIsOpen,
+    showModal,
+    setShowModal,
+    tb,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

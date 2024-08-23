@@ -16,7 +16,7 @@
 
 .ie p,
 .ie li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 30px;
   text-align: justify;
 }
@@ -34,6 +34,18 @@
   padding: 0.8rem 1.6rem;
   font-size: 20px;
   cursor: pointer;
+  width: 100%;
+  max-width: 25rem;
+}
+
+.ie section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .c1 {
@@ -103,7 +115,7 @@
   height: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: start;
+  align-items: center;
   border-bottom: 1px solid #b5b5b5;
   padding: 2rem 0;
   padding-bottom: 5rem;
@@ -112,6 +124,7 @@
 .c3 > div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -125,6 +138,20 @@
   background-color: white;
 }
 
+#c9 {
+  width: 90%;
+  height: 100%;
+  border-bottom: 1px solid #b5b5b5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+#c9 p {
+  font-size: 0.9rem;
+}
+
 .c5 {
   width: 90%;
   height: 100%;
@@ -135,7 +162,27 @@
   gap: 1.2rem;
 }
 
+.c6 {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.c6 p {
+  font-size: 1.1rem;
+}
+
 @media screen and (max-width: 1100px) {
+  .ie p,
+  .ie li,
+  .c6 p {
+    font-size: 0.9rem;
+    line-height: 25px;
+  }
   .c2 > div {
     flex-direction: column;
     gap: 2rem;
@@ -146,15 +193,43 @@
     flex-direction: column-reverse;
   }
   .ie img {
-    width: 90%;
+    width: 50%;
     height: auto;
   }
   .examTable th,
   .examTable td {
     padding: 0.5rem;
   }
+  .examTable {
+    font-size: 0.8rem;
+  }
   .c3 {
     flex-direction: column;
     gap: 3rem;
+  }
+  #c9 {
+    width: 90%;
+    height: 100%;
+    border-bottom: 1px solid #b5b5b5;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #c9 p {
+    font-size: 0.6rem;
+    line-height: 10px;
+  }
+  #c9 img {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ie img {
+    width: 90%;
+    height: auto;
   }
 }

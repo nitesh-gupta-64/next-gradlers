@@ -2,12 +2,11 @@ import React from "react";
 import styles from "./Contact.module.css";
 import Form from "../Form/Form";
 import Image from "next/image";
-import con from "../../../public/assets/images/contact.png";
+import con from "../../../public/gradlers/10.jpg";
 import c1 from "../../../public/assets/images/c1.png";
 import c2 from "../../../public/assets/images/c2.png";
 import dynamic from "next/dynamic";
 
-// Dynamically import the Map component with no SSR
 const Map = dynamic(() => import("../Map"), { ssr: false });
 
 const Contact = () => {

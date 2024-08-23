@@ -178,7 +178,7 @@ const Showcase = () => {
                   Math.floor(
                     (new Date() - new Date(eve.createdAt.toDate())) /
                       (1000 * 60 * 60 * 24)
-                  )}{" "}
+                  )}
                 days ago
               </i>
               <p>"{eve.title}"</p>
@@ -186,7 +186,7 @@ const Showcase = () => {
           ))}
         {clicked === "ss" &&
           showP.map((eve) => (
-            <div>
+            <div onClick={() => router.push("/success")} style={{cursor: 'pointer'}}>
               <img width={320} height={240} src={eve.Image} alt="img" />
               <i>
                 {" "}
@@ -205,7 +205,7 @@ const Showcase = () => {
           ))}
         {clicked === "events" &&
           showP.map((eve) => (
-            <div>
+            <div onClick={() => router.push("/ourevents")} style={{cursor: 'pointer'}}>
               <img width={320} height={240} src={eve.Image} alt="img" />
               <p>"{eve.Title}"</p>
             </div>

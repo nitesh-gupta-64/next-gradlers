@@ -1,0 +1,45 @@
+.card {
+  height: 22rem;
+  width: 17rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(161, 161, 161);
+  transition: all 150ms ease-in-out;
+  gap: 0.7rem;
+}
+
+.card > img {
+  height: 12rem;
+  width: 100%;
+  border-radius: 0.6rem;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.col {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #0a5495;
+}
+
+.program {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #D10B0B;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

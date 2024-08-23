@@ -22,7 +22,7 @@ const Hero = () => {
         <h2>
           Welcome to <span>gradlers</span>
         </h2>
-        <p>Give Wings to your Study Abroad Dreams</p>
+        <p>Your Path to Global Education <br /> Starts here!</p>
         {mb && (
           <div className={styles.swi}>
             <div className="swiper-wrapper">

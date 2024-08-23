@@ -10,16 +10,18 @@ import { AppContext } from "@/Context/AppContext";
 import Modal from "../Modal/Modal";
 
 const Navbar = () => {
-
   const [drop1, setDrop1] = useState(false);
   const [drop2, setDrop2] = useState(false);
   const [drop3, setDrop3] = useState(false);
   const [drop4, setDrop4] = useState(false);
   const [drop5, setDrop5] = useState(false);
+  const [drop6, setDrop6] = useState(false);
+  const [drop7, setDrop7] = useState(false);
+  const [drop8, setDrop8] = useState(false);
+  const [drop9, setDrop9] = useState(false);
   const { gm } = useContext(AppContext);
   return (
     <>
-      
       <div className={styles.navbar}>
         <ul>
           <li>
@@ -52,18 +54,23 @@ const Navbar = () => {
                       className={styles.drop2}
                     >
                       <li>
-                        <Link href="/counselling">
-                          <p>IELTS Academics</p>
+                        <Link href="/ielts">
+                          <p>IELTS</p>
                         </Link>
                       </li>
                       <li>
-                        <Link href="/counselling">
-                          <p>PTE Academics</p>
+                        <Link href="/toefl">
+                          <p>TOEFL</p>
                         </Link>
                       </li>
                       <li>
-                        <Link href="/counselling">
-                          <p>TOEFL IBT</p>
+                        <Link href="/pte">
+                          <p>PTE</p>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/duolingo">
+                          <p>DUOLINGO</p>
                         </Link>
                       </li>
                     </ul>
@@ -84,18 +91,18 @@ const Navbar = () => {
                       className={styles.drop5}
                     >
                       <li>
-                        <Link href="/counselling">
-                          <p>IELTS Academics</p>
+                        <Link href="/sat">
+                          <p>SAT</p>
                         </Link>
                       </li>
                       <li>
-                        <Link href="/counselling">
-                          <p>PTE Academics</p>
+                        <Link href="/gre">
+                          <p>GRE</p>
                         </Link>
                       </li>
                       <li>
-                        <Link href="/counselling">
-                          <p>TOEFL IBT</p>
+                        <Link href="/gmat">
+                          <p>GMAT</p>
                         </Link>
                       </li>
                     </ul>
@@ -109,88 +116,104 @@ const Navbar = () => {
               onMouseEnter={() => setDrop3(true)}
               onMouseLeave={() => setDrop3(false)}
             >
-              <h3>Admissions</h3>
+              <h3>Countries</h3>
               <Image src={drop} />
             </div>
             {drop3 && (
               <ul
                 onMouseEnter={() => setDrop3(true)}
                 onMouseLeave={() => setDrop3(false)}
-                className={styles.drop3}
+                className={styles.drop6}
               >
-                <li>
-                  <Link href="/success">Success Stories</Link>
-                </li>
-                <li>
-                  <Link
-                    href={`/blogs/gmat/${
-                      gm[0] && Object.keys(gm[0]).length === 0
-                        ? "noblog"
-                        : gm[0]?.slug || "noblog"
-                    }`}
-                  >
-                    Blogs
-                  </Link>
-                </li>
                 <li>
                   <Link href="/usa">USA</Link>
                 </li>
                 <li>
-                  <Link href="/countries">Country</Link>
+                  <Link href="/canada">Canada</Link>
                 </li>
                 <li>
-                  <Link href="/ourevents">Events</Link>
+                  <Link href="/uk">UK</Link>
                 </li>
                 <li>
-                  <Link href="/counselling">Undergrad</Link>
+                  <Link href="/germany">Germany</Link>
                 </li>
                 <li>
-                  <Link href="/counselling">Masters (MS)</Link>
+                  <Link href="/ireland">Ireland</Link>
                 </li>
                 <li>
-                  <Link href="/mba">MBA</Link>
+                  <Link href="/australia">Australia</Link>
                 </li>
                 <li>
-                  <Link href="/counselling">PHD</Link>
+                  <Link href="/new-zealand">New Zealand</Link>
                 </li>
               </ul>
             )}
-          </li>
-          <li>
-            <Link href="/contactus">
-              <h3>Visa Guidance</h3>
-            </Link>
-          </li>
-          <li>
-            <Link href="/counselling">
-              <h3>Career and Counselling</h3>
-            </Link>
           </li>
           <li>
             <div
               onMouseEnter={() => setDrop4(true)}
               onMouseLeave={() => setDrop4(false)}
             >
-              <h3>Diag Test</h3>
+              <h3>Study</h3>
               <Image src={drop} />
             </div>
             {drop4 && (
               <ul
                 onMouseEnter={() => setDrop4(true)}
                 onMouseLeave={() => setDrop4(false)}
-                className={styles.drop4}
+                className={styles.drop3}
               >
                 <li>
-                  <Link href="/gmat">GMAT</Link>
+                  <Link href="/ug">Undergrad</Link>
                 </li>
                 <li>
-                  <Link href="/ielts">IELTS</Link>
+                  <Link href="/masters">Masters</Link>
                 </li>
                 <li>
-                  <Link href="/counselling">TOEFL</Link>
+                  <Link href="/mba">MBA</Link>
+                </li>
+                <li>
+                  <Link href="/phd">Ph.D</Link>
                 </li>
               </ul>
             )}
+          </li>
+          <li>
+            <div
+              onMouseEnter={() => setDrop6(true)}
+              onMouseLeave={() => setDrop6(false)}
+            >
+              <h3>Visas</h3>
+              <Image src={drop} />
+            </div>
+            {drop6 && (
+              <ul
+                onMouseEnter={() => setDrop6(true)}
+                onMouseLeave={() => setDrop6(false)}
+                className={styles.drop6}
+              >
+                <li>
+                  <Link href="/visa/usa">USA</Link>
+                </li>
+                <li>
+                  <Link href="/visa/uk">UK</Link>
+                </li>
+                <li>
+                  <Link href="/visa/germany">Germany</Link>
+                </li>
+                <li>
+                  <Link href="/visa/canada">Canada</Link>
+                </li>
+                <li>
+                  <Link href="/visa/australia">Australia</Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li>
+            <Link href="/counselling">
+              <h3>Career Counselling</h3>
+            </Link>
           </li>
         </ul>
         <div>

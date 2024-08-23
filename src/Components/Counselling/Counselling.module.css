@@ -1,0 +1,336 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav {
+  width: 94%;
+  margin: 1.5rem 0;
+  color: gray;
+}
+
+.mainPara {
+  width: 90%;
+  margin: 2rem auto;
+  line-height: 2rem;
+}
+
+.img {
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+  max-height: 95vh;
+}
+
+.img > img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  max-height: 95vh;
+  z-index: 1;
+}
+
+.whiteContainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.blueContainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a5495;
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+  color: white;
+}
+
+.whiteContainer > div,
+.blueContainer > div {
+  width: 90%;
+}
+
+.register {
+  position: fixed;
+  top: 50%;
+  right: -5rem;
+  transform: rotate(90deg);
+  border: 1px solid white;
+  font-size: 1.5rem;
+  color: white;
+  background: #0a5495;
+  padding: 1rem 2rem;
+  border-top-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.register:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: rotate(90deg) scale(1.05);
+  background: #0a549554;
+  border: 1px solid #0a5495;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* 
+  .form {
+    position: fixed;
+    top: 10rem;
+    right: 2rem;
+  } */
+
+.yellowText {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #fecb02;
+}
+
+.why1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.whySub {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.whyBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.whyBox > div:nth-child(1) {
+  border: 2px solid orange;
+}
+.whyBox > div:nth-child(2) {
+  border: 2px solid red;
+}
+.whyBox > div:nth-child(3) {
+  border: 2px solid pink;
+}
+.whyBox > div:nth-child(4) {
+  border: 2px solid skyblue;
+}
+.whyBox > div:nth-child(5) {
+  border: 2px solid yellow;
+}
+
+.whyCard {
+  width: 23rem;
+  height: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 2rem 1rem 0 1rem;
+  border-radius: 1rem;
+}
+
+.whyCard > img {
+  height: 8rem;
+  width: 18rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.whyCard > div:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.whyCard > div:nth-child(3) {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.why {
+  position: relative;
+  height: auto;
+  width: 100vw;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.why > div > div {
+  height: 25rem !important;
+}
+
+.abs {
+  width: 100vw;
+  height: 18rem;
+  background-color: #0a5495;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cards {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.how {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.howBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.howBox > div {
+  border: 1px solid gray;
+  border-top: 2px solid gray;
+}
+
+.howCard {
+  width: 15rem;
+  min-height: 36rem;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0.6rem;
+  transition: all 150ms ease-in-out;
+}
+
+.howCard:hover {
+  transform: scale(1.05);
+}
+
+.howCard > img {
+  height: 7rem;
+  width: auto;
+}
+
+.howCard > div:nth-child(2) {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.howCard > div:nth-child(3) {
+  text-align: center;
+}
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 80% !important;
+}
+
+@media screen and (max-width: 1200px) {
+  /* .form {
+      position: static;
+    } */
+  .blueContainer > div,
+  .whiteContainer > div {
+    width: 100%;
+  }
+
+  .whiteContainer {
+    padding: 0.5rem;
+  }
+  .blueContainer {
+    padding: 2rem 1rem;
+  }
+}
+
+#mr {
+  margin-left: 4rem;
+  margin-top: 3.5rem;
+}
+
+@media screen and (max-width: 850px) {
+  .test::before {
+    background: transparent;
+  }
+  .req img {
+    display: none;
+  }
+  .tests > div {
+    margin: 0 !important;
+  }
+  #mr {
+    margin: 0;
+    margin-left: 4rem;
+  }
+
+  .reqRight {
+    gap: 1rem;
+  }
+  .reqLeft {
+    gap: 1.5rem;
+  }
+  .faqs {
+    width: 90% !important;
+  }
+
+  .whyCard {
+    width: 20rem;
+  }
+  .whyCard > img {
+    width: 14rem;
+  }
+}

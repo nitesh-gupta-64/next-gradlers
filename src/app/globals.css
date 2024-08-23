@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "swiper/swiper-bundle.css";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,25 +9,80 @@
   margin: 0;
 }
 
+*::selection {
+  background-color: #fecb02;
+  color: white;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: "Roboto", sans-serif;
+  font-family: "Sora", sans-serif;
   scroll-behavior: smooth;
-  scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-  width: 0px;
-  height: 0px;
-  background: transparent;
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #4267b1;
+  border-radius: 5px;
+  border: 3px solid #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #0a5495;
+}
+
+.yellow-button {
+  padding: 0.6rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #fecb02;
+  border: 1px solid #fecb02;
+  color: black;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.yellow-button:hover {
+  transform: scale(0.9);
+  background-color: #fecc0232;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.white-head {
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.blue-head {
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #0a5495;
 }
 
 body {
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 a {
@@ -81,21 +138,8 @@ h5 {
   align-items: center;
 }
 
-.swiper {
-  width: 35rem;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
-
-.about, .events {
+.about,
+.events {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,17 +147,97 @@ h5 {
   width: 100%;
 }
 
+.fixed {
+  position: fixed;
+  width: 35rem;
+}
+
+.flexx {
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .flexx {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 @media screen and (max-width: 800px) {
   h5 {
     font-size: 1.5rem;
     padding: 1rem 2rem;
   }
-  .swiper {
-    width: 18rem;
-  }
   .events > img {
     height: auto;
-  }  
+  }
 }
 
+
+
+.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hidden {
+  display: none;
+}
+.page {
+  width: 100%;
+}
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.header {
+  color: #000;
+  padding: 16px 0;
+}
+.header .title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+.translations-list-container {
+  color: #000;
+  padding-bottom: 8px;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.translations-list-container .translations-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.translations-list-container .translations-list .translations-list-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0 8px 8px 0;
+  color: #fff;
+}
+.translations-list-container .translations-list .translations-list-item a {
+  display: inline-block;
+  padding: 4px 8px;
+}
+.translations-list-container
+  .translations-list
+  .translations-list-item
+  a.active {
+  color: #fff;
+  background: #334055;
+}
+.translations-content-container {
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+.footer {
+  border-top: 1px solid #eee;
+  margin: 32px 0 0;
+  padding: 16px 0;
+}

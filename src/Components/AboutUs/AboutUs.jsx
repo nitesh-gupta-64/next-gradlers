@@ -8,8 +8,8 @@ import Banner from "../Banner/Banner";
 const AboutUs = () => {
   return (
     <>
-      <div className={styles.about} id="aboutus">
-        <h5>About Us</h5>
+      {/* <div className={styles.about} id="aboutus">
+        <h5>Why Choose GRADLERS</h5>
         <div>
           <div>
             <p>
@@ -18,7 +18,7 @@ const AboutUs = () => {
             <Image width={700} src={about} />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.marqueecontainer}>
         <div className={styles.marqueecontent}>
           <Banner />

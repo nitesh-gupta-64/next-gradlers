@@ -1,0 +1,70 @@
+.philCard {
+  position: relative;
+  width: 20rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.philCard > img {
+  width: 20rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.black {
+  background: #000000b0;
+  height: 6rem;
+  width: 20rem;
+  z-index: 2;
+  position: relative;
+  padding: 2.5rem 1rem 1rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.black > div:nth-child(3) {
+  opacity: 0;
+  display: none;
+  transition: all 1s ease-in-out;
+  font-size: 0.1rem;
+}
+
+.black > img {
+  position: absolute;
+  top: -2rem;
+  left: 8rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+}
+
+.philCard:hover .black {
+  height: 18rem;
+}
+
+.philCard:hover .black > div:nth-child(3) {
+  opacity: 1;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.philCard:hover .black > div:nth-child(2) {
+  opacity: 0;
+  display: none;
+}

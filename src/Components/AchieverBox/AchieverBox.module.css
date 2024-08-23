@@ -1,0 +1,9 @@
+.box {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}

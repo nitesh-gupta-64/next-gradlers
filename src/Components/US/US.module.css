@@ -9,6 +9,16 @@
   padding: 3rem 0;
 }
 
+.us section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+}
+
 .us h3 {
   font-size: 3rem;
   font-weight: 500;
@@ -16,7 +26,7 @@
 
 .us p {
   font-family: "Inter";
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 30px;
   text-align: justify;
 }
@@ -32,7 +42,7 @@
 }
 
 .us li {
-  font-size: 1.32rem;
+  font-size: 1rem;
   margin-top: 0.4rem;
   margin-left: 2rem;
 }
@@ -53,7 +63,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -79,6 +89,7 @@
   background-color: #fecb02;
   padding: 0.7rem 1rem;
   border-radius: 1rem;
+  font-size: 1.3rem;
 }
 
 .c3 > div {
@@ -117,7 +128,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
+}
+
+.c6 p {
+  font-size: 1.1rem;
 }
 
 .tableContainer {
@@ -184,7 +199,8 @@
   .us h3 {
     font-size: 2rem;
   }
-  .us p {
+  .us p,
+  .c6 p {
     font-size: 0.9rem;
     line-height: 25px;
   }

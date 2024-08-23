@@ -1,0 +1,45 @@
+.our {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: #0a5495;
+  padding: 2rem 0rem;
+}
+
+.cards {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+}
+
+.cards > div:nth-child(1) {
+  border-bottom: 5px solid rgb(255, 242, 0);
+}
+
+.cards > div:nth-child(2) {
+  border-bottom: 5px solid red;
+}
+
+.cards > div:nth-child(3) {
+  border-bottom: 5px solid green;
+}
+
+.cards > div:nth-child(4) {
+  border-bottom: 5px solid black;
+}
+
+.cards > div:nth-child(5) {
+  border-bottom: 5px solid pink;
+}
+
+.cards > div:nth-child(6) {
+  border-bottom: 5px solid blue;
+}

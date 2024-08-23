@@ -1,7 +1,7 @@
 export const metadata = {
   title: "USA",
   description:
-    "gradlers is an which helps students to study in abroad",
+    "gradlers helps students to study in abroad",
   keywords: "gradlers, Gradlers, abroad, study",
 };
 

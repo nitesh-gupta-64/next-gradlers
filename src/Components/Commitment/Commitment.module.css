@@ -1,0 +1,19 @@
+.our {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  padding-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.new {
+  display: flex;
+  flex-direction: column;
+  background-color: #0a5495;
+  gap: 2rem;
+  padding: 2rem 0rem;
+}

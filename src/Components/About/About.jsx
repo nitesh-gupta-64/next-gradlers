@@ -51,15 +51,9 @@ const About = () => {
       </div>
       <div className={styles.ab3}>
         <div>
-          <h2>Why Gradlers?</h2>
-          <p>
-            Gradlers enables students to achieve their academic dreams and
-            become impactful leaders by providing comprehensive mentoring,
-            in-depth test preparation and admissions counseling. We help you
-            unlock your potential to achieve the extraordinary.
-          </p>
+          <h2>Our Values</h2>
+
           <div>
-            <b>Our Values</b>
             <ol>
               <li>
                 Commitment to Excellence – Set high standards in everything we

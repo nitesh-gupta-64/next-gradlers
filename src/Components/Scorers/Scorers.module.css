@@ -1,0 +1,10 @@
+.our {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}

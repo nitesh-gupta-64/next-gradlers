@@ -33,7 +33,7 @@ const HelpMba = () => {
     },
     {
       head: "Alumni Network",
-      para: "With 170,000+ Jamboree alumni at universities across the globe, you will always have access to a ready network wherever you go",
+      para: "With 5000+ Gradlers alumni at universities across the globe, you will always have access to a ready network wherever you go",
       img: mba5,
     },
     {
@@ -45,7 +45,7 @@ const HelpMba = () => {
   return (
     <div className={styles.help}>
       <div>
-        <h5>Services we Offer</h5>
+        <h5>GRADLERS Services</h5>
       </div>
       <div>
         {data.map((d) => (

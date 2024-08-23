@@ -1,0 +1,25 @@
+.card {
+  border-right: 1px solid brown;
+  max-width: 20rem;
+  height: 11rem;
+  padding: 0 2.2rem;
+}
+
+.head {
+  font-size: 1.8rem;
+  color: #ff0000;
+  text-align: center;
+}
+
+.num {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.desc {
+  font-size: 2.6rem;
+  color: #ff0000;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Suez One", serif;
+}

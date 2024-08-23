@@ -1,0 +1,30 @@
+.card {
+  height: 14rem;
+  width: 18rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 150ms ease-in-out;
+  border: 3px solid rgb(161, 161, 161);
+}
+
+.head {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #FF0000;
+}
+
+.desc {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

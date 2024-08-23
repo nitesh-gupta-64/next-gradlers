@@ -1,0 +1,275 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav {
+  width: 94%;
+  margin: 1.5rem 0;
+  color: gray;
+}
+
+.mainPara {
+  width: 80%;
+  margin: 2rem auto;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+.img {
+  width: 70%;
+  margin: 1rem 0 0 0;
+  max-height: 95vh;
+}
+
+.img > img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 80vh;
+  z-index: 1;
+  border: 1px solid #0a5495;
+  box-shadow: rgba(0, 0, 0, 0.495) 1.95px 1.95px 2.6px;
+}
+
+.whiteContainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.blueContainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a5495;
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+  color: white;
+}
+
+.whiteContainer > div,
+.blueContainer > div {
+  width: 90%;
+}
+
+.register {
+  position: fixed;
+  top: 50%;
+  right: -5.5rem;
+  transform: rotate(90deg);
+  border: 1px solid white;
+  font-size: 1.5rem;
+  color: white;
+  background: #0a5495;
+  padding: 1rem 2rem;
+  border-top-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.register:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: rotate(90deg) scale(1.05);
+  background: #0a549554;
+  border: 1px solid #0a5495;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.yellowText {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #fecb02;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+.whyBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.whyCard {
+  position: relative;
+  width: 20rem;
+}
+
+.whyCard > img {
+  width: 20rem;
+}
+
+.whyCard > div {
+  position: absolute;
+  width: 10rem;
+  left: calc(50% - 5rem);
+  top: calc(100% - 3.2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.trend {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+.trendDesc {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.trendBox {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.trendBox span {
+  font-weight: 700;
+}
+
+.elg {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+.elgBox {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.elgTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+.elgPtBox,
+.elgDesc {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.elgPtBox {
+  margin-left: 2rem;
+}
+
+.dest {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2.5rem;
+  flex-direction: column;
+  width: 95% !important;
+}
+
+.destBox {
+  width: 100%;
+}
+
+.destCard {
+  width: 18rem;
+  position: relative;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  color: black;
+  min-height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.destCard > img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 100%;
+  top: -2.5rem;
+  left: calc(50% - 2.5rem);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.destCard > div:nth-child(2) {
+  margin-top: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.destCard > div:nth-child(3) {
+  font-weight: 500;
+  text-align: center;
+}
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 80% !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .blueContainer > div,
+  .whiteContainer > div {
+    width: 100%;
+  }
+  .whiteContainer {
+    padding: 0.5rem;
+  }
+  .blueContainer {
+    padding: 2rem 1rem;
+  }
+}

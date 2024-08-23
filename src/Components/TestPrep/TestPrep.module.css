@@ -1,0 +1,433 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav {
+  width: 94%;
+  margin: 1.5rem 0;
+  color: gray;
+}
+
+.register {
+  position: fixed;
+  top: 50%;
+  right: -5rem;
+  transform: rotate(90deg);
+  border: 1px solid white;
+  font-size: 1.5rem;
+  color: white;
+  background: #0a5495;
+  padding: 1rem 2rem;
+  border-top-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.register:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: rotate(90deg) scale(1.05);
+  background: #0a549554;
+  border: 1px solid #0a5495;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.img {
+  width: 94%;
+  margin: 0.5rem 0 2rem 0;
+  max-height: 90vh;
+  position: relative;
+}
+
+.img > img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 90vh;
+  z-index: 1;
+}
+
+.abs {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 2.5rem;
+  width: 10rem;
+  height: 3rem;
+  background-color: #ff6e2f;
+  z-index: 2;
+}
+
+.whiteContainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.blueContainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a5495;
+  padding: 2rem 2rem;
+  margin: 2rem 0;
+  color: white;
+}
+
+.whiteContainer > div,
+.blueContainer > div {
+  width: 90%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+/* .form {
+  position: fixed;
+  top: 10rem;
+  right: 2rem;
+} */
+
+.why {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.whyHead {
+  width: 100%;
+  background-color: #0a5495;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.whyHead > div {
+  width: 10rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.whyDesc {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.whyDesc > div {
+  width: 10rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+.why2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.whyBox {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+}
+
+.whyCard {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 15rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.whyCard > img {
+  height: 10rem;
+  width: auto;
+}
+
+.who {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: start;
+  line-height: 1.3rem;
+}
+
+.yellowText {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #fecb02;
+}
+
+.pattern {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.ptDesc {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+.ptTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ptTable td,
+.ptTable th {
+  border: 1px solid #0a5495;
+  text-align: center;
+}
+
+.ptTable th {
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  max-width: 20rem;
+  line-height: 1.8rem;
+}
+
+.ptTable td {
+  padding: 1rem;
+  font-size: 1.1rem;
+  max-width: 20rem;
+  line-height: 1.8rem;
+}
+
+.ace {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.aceBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+  line-height: 1.3rem;
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.aceCard {
+  height: 15rem;
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.aceCard > img {
+  height: 7rem;
+  width: auto;
+}
+
+.prep {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.prepBox {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-align: start;
+}
+
+.prepCard {
+  width: 15rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.prepCard > img {
+  height: auto;
+  width: 4rem;
+}
+
+.prepCard > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.prepCard > div > img {
+  width: 5rem;
+  height: auto;
+}
+
+.sol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.solBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: start;
+}
+
+.solCard {
+  width: 15rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.solCard > img {
+  height: auto;
+  width: 7rem;
+}
+
+.solCard > div {
+  margin-top: 1rem;
+}
+
+.ach {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 6rem;
+}
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 80% !important;
+}
+
+@media screen and (max-width: 1200px) {
+  /* .form {
+    position: static;
+  } */
+  .blueContainer > div,
+  .whiteContainer > div {
+    width: 100%;
+  }
+
+  .whiteContainer {
+    padding: 0.5rem;
+  }
+  .blueContainer {
+    padding: 2rem 1rem;
+  }
+  .whyHead {
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+    gap: 1rem;
+  }
+  .whyDesc {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .ptTable th {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .ptTable td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .whyHead,
+  .whyDesc {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .faqs {
+    width: 90% !important;
+  }
+}

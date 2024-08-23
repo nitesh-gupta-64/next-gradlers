@@ -1,0 +1,28 @@
+#side {
+  /* width: 32rem; */
+  width: 28rem;
+  position: relative;
+}
+
+#side > form {
+  position: fixed;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  #side {
+    width: 20rem;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    /* height: 40rem; */
+  }
+
+  #side > form {
+    position: static;
+    margin: auto;
+    z-index: 30;
+  }
+}

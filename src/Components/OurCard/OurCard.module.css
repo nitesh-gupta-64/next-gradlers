@@ -1,0 +1,28 @@
+.card {
+  height: 18rem;
+  width: 18rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 150ms ease-in-out;
+}
+
+.card > img {
+  height: 9rem;
+  width: auto;
+}
+
+.head {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

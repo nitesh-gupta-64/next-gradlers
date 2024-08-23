@@ -1,9 +1,13 @@
+
 import IELTS from '@/Components/IELTS/IELTS'
+import NewIelts from '@/Components/NewIelts/NewIelts'
 import React from 'react'
 
 const page = () => {
   return (
-    <IELTS/>
+    <NewIelts/>
+    // <IELTS/>
+    
   )
 }
 

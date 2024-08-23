@@ -1,6 +1,6 @@
 .navbar {
   width: 97%;
-  height: 4rem;
+  height: 3.5rem;
   background-color: #fff9e0;
   position: absolute;
   display: flex;
@@ -30,7 +30,8 @@
 .drop2,
 .drop3,
 .drop4,
-.drop5 {
+.drop5,
+.drop6 {
   position: absolute;
 }
 
@@ -42,12 +43,16 @@
 .navbar > ul > li > ul > li > div {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 0.3rem;
+  z-index: 10;
   align-items: center;
   gap: 1rem;
 }
 
-.navbar > ul > li > ul > li > div {
-  gap: 4rem;
+.navbar > ul > li > ul > li > div > p {
+  width: 90%;
+  text-align: center;
 }
 
 .navbar > ul > li > ul > li {
@@ -88,6 +93,7 @@
   border-bottom: 1px solid #ff750080;
   padding: 0.5rem;
   margin: 0.5rem 1rem;
+  text-align: center;
 }
 
 .navbar > ul > li > ul > li > ul > li:nth-last-child(1) {
@@ -103,7 +109,6 @@
     gap: 7rem;
   }
 }
-
 
 @media screen and (max-width: 1420px) {
   .navbar > ul {
@@ -122,7 +127,6 @@
     gap: 2rem;
   }
 }
-
 
 @media screen and (max-width: 1150px) {
   .navbar h3 {

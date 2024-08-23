@@ -9,7 +9,8 @@ import Image from "next/image";
 import can from "../../../public/assets/images/can.png";
 import aus from "../../../public/assets/images/aus.png";
 import usa from "../../../public/assets/images/usa.png";
-import fra from "../../../public/assets/images/fra.png";
+import fra from "../../../public/assets/images/germany.png";
+import ire from "../../../public/assets/images/ireland.png";
 import { AppContext } from "@/Context/AppContext";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -19,7 +20,7 @@ const Countries = () => {
   return (
     <div className={styles.countries}>
       <div>
-        <h5>Countries for Admission</h5>
+        <h5>Countries for Admissions</h5>
       </div>
       <div>
         <Swiper
@@ -67,7 +68,7 @@ const Countries = () => {
                 alt={can}
                 style={{
                   borderRadius: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: "140px",
                   height: "140px",
                 }}
@@ -98,7 +99,7 @@ const Countries = () => {
                 alt={aus}
                 style={{
                   borderRadius: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: "140px",
                   height: "140px",
                 }}
@@ -129,7 +130,7 @@ const Countries = () => {
                 alt={usa}
                 style={{
                   borderRadius: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: "140px",
                   height: "140px",
                 }}
@@ -160,12 +161,13 @@ const Countries = () => {
                 alt={fra}
                 style={{
                   borderRadius: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: "140px",
                   height: "140px",
+                  boxShadow: "0px 4px 10px gray",
                 }}
               />
-              <p>France</p>
+              <p>Germany</p>
             </div>
           </SwiperSlide>
           <SwiperSlide
@@ -187,109 +189,17 @@ const Countries = () => {
               }}
             >
               <Image
-                src={can}
-                alt={can}
-                style={{
-                  borderRadius: "100%",
-                  objectFit: "contain",
-                  width: "140px",
-                  height: "140px",
-                }}
-              />
-              <p>Canada</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "90%",
-                backgroundColor: "#fff",
-                flexDirection: "column",
-              }}
-            >
-              <Image
-                src={aus}
-                alt={aus}
-                style={{
-                  borderRadius: "100%",
-                  objectFit: "contain",
-                  width: "140px",
-                  height: "140px",
-                }}
-              />
-              <p>Australia</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "90%",
-                backgroundColor: "#fff",
-                flexDirection: "column",
-              }}
-            >
-              <Image
-                src={usa}
-                alt={usa}
-                style={{
-                  borderRadius: "100%",
-                  objectFit: "contain",
-                  width: "140px",
-                  height: "140px",
-                }}
-              />
-              <p>USA</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "90%",
-                backgroundColor: "#fff",
-                flexDirection: "column",
-              }}
-            >
-              <Image
-                src={fra}
+                src={ire}
                 alt={fra}
                 style={{
                   borderRadius: "100%",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   width: "140px",
                   height: "140px",
+                  boxShadow: "0px 4px 10px gray",
                 }}
               />
-              <p>France</p>
+              <p>Ireland</p>
             </div>
           </SwiperSlide>
         </Swiper>
